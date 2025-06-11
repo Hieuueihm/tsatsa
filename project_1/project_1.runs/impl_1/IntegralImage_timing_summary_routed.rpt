@@ -1,0 +1,1591 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Jun 11 17:43:07 2025
+| Host         : DESKTOP-4VU606L running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_timing_summary -max_paths 10 -file IntegralImage_timing_summary_routed.rpt -pb IntegralImage_timing_summary_routed.pb -rpx IntegralImage_timing_summary_routed.rpx -warn_on_violation
+| Design       : IntegralImage
+| Device       : 7k70t-fbv676
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                    Violations  
+---------  --------  -----------------------------  ----------  
+TIMING-18  Warning   Missing input or output delay  95          
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (54)
+6. checking no_output_delay (17)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (54)
+-------------------------------
+ There are 54 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (17)
+--------------------------------
+ There are 17 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     90.468        0.000                      0                  251        0.156        0.000                      0                  251       49.600        0.000                       0                   122  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)         Period(ns)      Frequency(MHz)
+-----  ------------         ----------      --------------
+clk    {0.000 50.000}       100.000         10.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                90.468        0.000                      0                  251        0.156        0.000                      0                  251       49.600        0.000                       0                   122  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack       90.468ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.156ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       49.600ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             90.468ns  (required time - arrival time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Memory_ins/memory_reg/ADDRBWRADDR[11]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk rise@100.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.961ns  (logic 2.100ns (23.435%)  route 6.861ns (76.565%))
+  Logic Levels:           14  (CARRY4=5 LUT2=2 LUT3=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.433ns = ( 104.433 - 100.000 ) 
+    Source Clock Delay      (SCD):    4.757ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.845     0.845 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.140     2.985    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.105 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.652     4.757    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDCE (Prop_fdce_C_Q)         0.308     5.065 r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/Q
+                         net (fo=56, routed)          1.659     6.724    DATAPATH_INST/COUNTER_I/Q[1]
+    SLICE_X8Y32          LUT3 (Prop_lut3_I2_O)        0.066     6.790 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9/O
+                         net (fo=11, routed)          0.837     7.627    DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9_n_0
+    SLICE_X7Y30          LUT6 (Prop_lut6_I3_O)        0.168     7.795 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_1/O
+                         net (fo=2, routed)           0.453     8.248    DATAPATH_INST/COUNTER_I/counter_value_reg[3]_0[2]
+    SLICE_X6Y30          LUT6 (Prop_lut6_I0_O)        0.053     8.301 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.301    DATAPATH_INST/COUNTER_I_n_30
+    SLICE_X6Y30          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     8.517 r  DATAPATH_INST/addr_B1__0_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.517    DATAPATH_INST/addr_B1__0_carry_n_0
+    SLICE_X6Y31          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.181     8.698 r  DATAPATH_INST/addr_B1__0_carry__0/O[3]
+                         net (fo=1, routed)           0.296     8.994    DATAPATH_INST/COUNTER_I/addr_B1__35_carry__0_i_1_1[1]
+    SLICE_X7Y30          LUT6 (Prop_lut6_I5_O)        0.142     9.136 r  DATAPATH_INST/COUNTER_I/addr_B1__35_carry__0_i_2/O
+                         net (fo=1, routed)           0.533     9.670    DATAPATH_INST/COUNTER_I/addr_B1__35_carry__0_i_2_n_0
+    SLICE_X6Y33          LUT6 (Prop_lut6_I5_O)        0.053     9.723 r  DATAPATH_INST/COUNTER_I/addr_B1__35_carry__0_i_1/O
+                         net (fo=1, routed)           0.000     9.723    DATAPATH_INST/COUNTER_I_n_60
+    SLICE_X6Y33          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.143     9.866 r  DATAPATH_INST/addr_B1__35_carry__0/O[0]
+                         net (fo=1, routed)           0.447    10.312    DATAPATH_INST/Memory_ins/addr_B1[3]
+    SLICE_X7Y32          LUT2 (Prop_lut2_I0_O)        0.153    10.465 r  DATAPATH_INST/Memory_ins/addr_B0_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    10.465    DATAPATH_INST/Memory_ins_n_24
+    SLICE_X7Y32          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.140    10.605 r  DATAPATH_INST/addr_B0_carry__0/O[3]
+                         net (fo=3, routed)           0.734    11.339    DATAPATH_INST/COUNTER_J/addr_B0[7]
+    SLICE_X0Y31          LUT2 (Prop_lut2_I1_O)        0.142    11.481 r  DATAPATH_INST/COUNTER_J/addr_B_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    11.481    DATAPATH_INST/COUNTER_J_n_23
+    SLICE_X0Y31          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.140    11.621 r  DATAPATH_INST/addr_B_carry__0/O[3]
+                         net (fo=1, routed)           0.405    12.026    CONTROLLER_INST/addr_B[7]
+    SLICE_X1Y30          LUT5 (Prop_lut5_I0_O)        0.142    12.168 r  CONTROLLER_INST/memory_reg_i_29/O
+                         net (fo=1, routed)           0.560    12.728    CONTROLLER_INST/memory_reg_i_29_n_0
+    SLICE_X1Y29          LUT6 (Prop_lut6_I2_O)        0.053    12.781 r  CONTROLLER_INST/memory_reg_i_3/O
+                         net (fo=2, routed)           0.937    13.718    DATAPATH_INST/Memory_ins/ADDRARDADDR[7]
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/ADDRBWRADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)      100.000   100.000 r  
+    P23                                               0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.769   100.769 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.040   102.809    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113   102.922 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.512   104.434    DATAPATH_INST/Memory_ins/CLK
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/CLKBWRCLK
+                         clock pessimism              0.267   104.701    
+                         clock uncertainty           -0.035   104.665    
+    RAMB18_X0Y14         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_ADDRBWRADDR[11])
+                                                     -0.479   104.186    DATAPATH_INST/Memory_ins/memory_reg
+  -------------------------------------------------------------------
+                         required time                        104.186    
+                         arrival time                         -13.718    
+  -------------------------------------------------------------------
+                         slack                                 90.468    
+
+Slack (MET) :             90.613ns  (required time - arrival time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Memory_ins/memory_reg/ADDRARDADDR[11]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk rise@100.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.819ns  (logic 2.100ns (23.813%)  route 6.719ns (76.187%))
+  Logic Levels:           14  (CARRY4=5 LUT2=2 LUT3=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        -0.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.435ns = ( 104.435 - 100.000 ) 
+    Source Clock Delay      (SCD):    4.757ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.845     0.845 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.140     2.985    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.105 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.652     4.757    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDCE (Prop_fdce_C_Q)         0.308     5.065 r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/Q
+                         net (fo=56, routed)          1.659     6.724    DATAPATH_INST/COUNTER_I/Q[1]
+    SLICE_X8Y32          LUT3 (Prop_lut3_I2_O)        0.066     6.790 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9/O
+                         net (fo=11, routed)          0.837     7.627    DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9_n_0
+    SLICE_X7Y30          LUT6 (Prop_lut6_I3_O)        0.168     7.795 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_1/O
+                         net (fo=2, routed)           0.453     8.248    DATAPATH_INST/COUNTER_I/counter_value_reg[3]_0[2]
+    SLICE_X6Y30          LUT6 (Prop_lut6_I0_O)        0.053     8.301 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.301    DATAPATH_INST/COUNTER_I_n_30
+    SLICE_X6Y30          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.216     8.517 r  DATAPATH_INST/addr_B1__0_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.517    DATAPATH_INST/addr_B1__0_carry_n_0
+    SLICE_X6Y31          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.181     8.698 r  DATAPATH_INST/addr_B1__0_carry__0/O[3]
+                         net (fo=1, routed)           0.296     8.994    DATAPATH_INST/COUNTER_I/addr_B1__35_carry__0_i_1_1[1]
+    SLICE_X7Y30          LUT6 (Prop_lut6_I5_O)        0.142     9.136 r  DATAPATH_INST/COUNTER_I/addr_B1__35_carry__0_i_2/O
+                         net (fo=1, routed)           0.533     9.670    DATAPATH_INST/COUNTER_I/addr_B1__35_carry__0_i_2_n_0
+    SLICE_X6Y33          LUT6 (Prop_lut6_I5_O)        0.053     9.723 r  DATAPATH_INST/COUNTER_I/addr_B1__35_carry__0_i_1/O
+                         net (fo=1, routed)           0.000     9.723    DATAPATH_INST/COUNTER_I_n_60
+    SLICE_X6Y33          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.143     9.866 r  DATAPATH_INST/addr_B1__35_carry__0/O[0]
+                         net (fo=1, routed)           0.447    10.312    DATAPATH_INST/Memory_ins/addr_B1[3]
+    SLICE_X7Y32          LUT2 (Prop_lut2_I0_O)        0.153    10.465 r  DATAPATH_INST/Memory_ins/addr_B0_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    10.465    DATAPATH_INST/Memory_ins_n_24
+    SLICE_X7Y32          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.140    10.605 r  DATAPATH_INST/addr_B0_carry__0/O[3]
+                         net (fo=3, routed)           0.734    11.339    DATAPATH_INST/COUNTER_J/addr_B0[7]
+    SLICE_X0Y31          LUT2 (Prop_lut2_I1_O)        0.142    11.481 r  DATAPATH_INST/COUNTER_J/addr_B_carry__0_i_1/O
+                         net (fo=1, routed)           0.000    11.481    DATAPATH_INST/COUNTER_J_n_23
+    SLICE_X0Y31          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.140    11.621 r  DATAPATH_INST/addr_B_carry__0/O[3]
+                         net (fo=1, routed)           0.405    12.026    CONTROLLER_INST/addr_B[7]
+    SLICE_X1Y30          LUT5 (Prop_lut5_I0_O)        0.142    12.168 r  CONTROLLER_INST/memory_reg_i_29/O
+                         net (fo=1, routed)           0.560    12.728    CONTROLLER_INST/memory_reg_i_29_n_0
+    SLICE_X1Y29          LUT6 (Prop_lut6_I2_O)        0.053    12.781 r  CONTROLLER_INST/memory_reg_i_3/O
+                         net (fo=2, routed)           0.794    13.576    DATAPATH_INST/Memory_ins/ADDRARDADDR[7]
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/ADDRARDADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)      100.000   100.000 r  
+    P23                                               0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.769   100.769 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.040   102.809    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113   102.922 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.514   104.436    DATAPATH_INST/Memory_ins/CLK
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/CLKARDCLK
+                         clock pessimism              0.267   104.703    
+                         clock uncertainty           -0.035   104.667    
+    RAMB18_X0Y14         RAMB18E1 (Setup_ramb18e1_CLKARDCLK_ADDRARDADDR[11])
+                                                     -0.479   104.188    DATAPATH_INST/Memory_ins/memory_reg
+  -------------------------------------------------------------------
+                         required time                        104.188    
+                         arrival time                         -13.576    
+  -------------------------------------------------------------------
+                         slack                                 90.613    
+
+Slack (MET) :             90.654ns  (required time - arrival time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Memory_ins/memory_reg/ADDRBWRADDR[10]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk rise@100.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.775ns  (logic 2.226ns (25.366%)  route 6.549ns (74.634%))
+  Logic Levels:           13  (CARRY4=5 LUT2=3 LUT3=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.433ns = ( 104.433 - 100.000 ) 
+    Source Clock Delay      (SCD):    4.757ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.845     0.845 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.140     2.985    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.105 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.652     4.757    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDCE (Prop_fdce_C_Q)         0.308     5.065 r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/Q
+                         net (fo=56, routed)          1.659     6.724    DATAPATH_INST/COUNTER_I/Q[1]
+    SLICE_X8Y32          LUT3 (Prop_lut3_I2_O)        0.066     6.790 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9/O
+                         net (fo=11, routed)          0.837     7.627    DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9_n_0
+    SLICE_X7Y30          LUT6 (Prop_lut6_I3_O)        0.168     7.795 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_1/O
+                         net (fo=2, routed)           0.453     8.248    DATAPATH_INST/COUNTER_I/counter_value_reg[3]_0[2]
+    SLICE_X6Y30          LUT6 (Prop_lut6_I0_O)        0.053     8.301 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.301    DATAPATH_INST/COUNTER_I_n_30
+    SLICE_X6Y30          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.138     8.439 r  DATAPATH_INST/addr_B1__0_carry/O[3]
+                         net (fo=2, routed)           0.441     8.880    DATAPATH_INST/addr_B1__0_carry_n_4
+    SLICE_X6Y32          LUT2 (Prop_lut2_I0_O)        0.142     9.022 r  DATAPATH_INST/addr_B1__35_carry_i_5/O
+                         net (fo=1, routed)           0.000     9.022    DATAPATH_INST/addr_B1__35_carry_i_5_n_0
+    SLICE_X6Y32          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.143     9.165 r  DATAPATH_INST/addr_B1__35_carry/O[0]
+                         net (fo=1, routed)           0.547     9.711    DATAPATH_INST/addr_B1[3]
+    SLICE_X7Y31          LUT2 (Prop_lut2_I1_O)        0.153     9.864 r  DATAPATH_INST/addr_B0_carry_i_1/O
+                         net (fo=1, routed)           0.000     9.864    DATAPATH_INST/addr_B0_carry_i_1_n_0
+    SLICE_X7Y31          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233    10.097 r  DATAPATH_INST/addr_B0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.097    DATAPATH_INST/addr_B0_carry_n_0
+    SLICE_X7Y32          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.139    10.236 r  DATAPATH_INST/addr_B0_carry__0/O[0]
+                         net (fo=5, routed)           0.792    11.029    DATAPATH_INST/COUNTER_J/addr_B0[4]
+    SLICE_X0Y31          LUT2 (Prop_lut2_I0_O)        0.155    11.184 r  DATAPATH_INST/COUNTER_J/addr_B_carry__0_i_4/O
+                         net (fo=1, routed)           0.000    11.184    DATAPATH_INST/COUNTER_J_n_26
+    SLICE_X0Y31          CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.323    11.507 r  DATAPATH_INST/addr_B_carry__0/O[2]
+                         net (fo=1, routed)           0.512    12.019    CONTROLLER_INST/addr_B[6]
+    SLICE_X1Y30          LUT5 (Prop_lut5_I0_O)        0.152    12.171 r  CONTROLLER_INST/memory_reg_i_32/O
+                         net (fo=1, routed)           0.544    12.714    CONTROLLER_INST/memory_reg_i_32_n_0
+    SLICE_X3Y30          LUT6 (Prop_lut6_I2_O)        0.053    12.767 r  CONTROLLER_INST/memory_reg_i_4/O
+                         net (fo=2, routed)           0.765    13.532    DATAPATH_INST/Memory_ins/ADDRARDADDR[6]
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/ADDRBWRADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)      100.000   100.000 r  
+    P23                                               0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.769   100.769 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.040   102.809    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113   102.922 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.512   104.434    DATAPATH_INST/Memory_ins/CLK
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/CLKBWRCLK
+                         clock pessimism              0.267   104.701    
+                         clock uncertainty           -0.035   104.665    
+    RAMB18_X0Y14         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_ADDRBWRADDR[10])
+                                                     -0.479   104.186    DATAPATH_INST/Memory_ins/memory_reg
+  -------------------------------------------------------------------
+                         required time                        104.186    
+                         arrival time                         -13.532    
+  -------------------------------------------------------------------
+                         slack                                 90.654    
+
+Slack (MET) :             90.656ns  (required time - arrival time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Memory_ins/memory_reg/ADDRARDADDR[10]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk rise@100.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.775ns  (logic 2.226ns (25.366%)  route 6.549ns (74.634%))
+  Logic Levels:           13  (CARRY4=5 LUT2=3 LUT3=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.435ns = ( 104.435 - 100.000 ) 
+    Source Clock Delay      (SCD):    4.757ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.845     0.845 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.140     2.985    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.105 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.652     4.757    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDCE (Prop_fdce_C_Q)         0.308     5.065 r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/Q
+                         net (fo=56, routed)          1.659     6.724    DATAPATH_INST/COUNTER_I/Q[1]
+    SLICE_X8Y32          LUT3 (Prop_lut3_I2_O)        0.066     6.790 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9/O
+                         net (fo=11, routed)          0.837     7.627    DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9_n_0
+    SLICE_X7Y30          LUT6 (Prop_lut6_I3_O)        0.168     7.795 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_1/O
+                         net (fo=2, routed)           0.453     8.248    DATAPATH_INST/COUNTER_I/counter_value_reg[3]_0[2]
+    SLICE_X6Y30          LUT6 (Prop_lut6_I0_O)        0.053     8.301 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.301    DATAPATH_INST/COUNTER_I_n_30
+    SLICE_X6Y30          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.138     8.439 r  DATAPATH_INST/addr_B1__0_carry/O[3]
+                         net (fo=2, routed)           0.441     8.880    DATAPATH_INST/addr_B1__0_carry_n_4
+    SLICE_X6Y32          LUT2 (Prop_lut2_I0_O)        0.142     9.022 r  DATAPATH_INST/addr_B1__35_carry_i_5/O
+                         net (fo=1, routed)           0.000     9.022    DATAPATH_INST/addr_B1__35_carry_i_5_n_0
+    SLICE_X6Y32          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.143     9.165 r  DATAPATH_INST/addr_B1__35_carry/O[0]
+                         net (fo=1, routed)           0.547     9.711    DATAPATH_INST/addr_B1[3]
+    SLICE_X7Y31          LUT2 (Prop_lut2_I1_O)        0.153     9.864 r  DATAPATH_INST/addr_B0_carry_i_1/O
+                         net (fo=1, routed)           0.000     9.864    DATAPATH_INST/addr_B0_carry_i_1_n_0
+    SLICE_X7Y31          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233    10.097 r  DATAPATH_INST/addr_B0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.097    DATAPATH_INST/addr_B0_carry_n_0
+    SLICE_X7Y32          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.139    10.236 r  DATAPATH_INST/addr_B0_carry__0/O[0]
+                         net (fo=5, routed)           0.792    11.029    DATAPATH_INST/COUNTER_J/addr_B0[4]
+    SLICE_X0Y31          LUT2 (Prop_lut2_I0_O)        0.155    11.184 r  DATAPATH_INST/COUNTER_J/addr_B_carry__0_i_4/O
+                         net (fo=1, routed)           0.000    11.184    DATAPATH_INST/COUNTER_J_n_26
+    SLICE_X0Y31          CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.323    11.507 r  DATAPATH_INST/addr_B_carry__0/O[2]
+                         net (fo=1, routed)           0.512    12.019    CONTROLLER_INST/addr_B[6]
+    SLICE_X1Y30          LUT5 (Prop_lut5_I0_O)        0.152    12.171 r  CONTROLLER_INST/memory_reg_i_32/O
+                         net (fo=1, routed)           0.544    12.714    CONTROLLER_INST/memory_reg_i_32_n_0
+    SLICE_X3Y30          LUT6 (Prop_lut6_I2_O)        0.053    12.767 r  CONTROLLER_INST/memory_reg_i_4/O
+                         net (fo=2, routed)           0.765    13.532    DATAPATH_INST/Memory_ins/ADDRARDADDR[6]
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/ADDRARDADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)      100.000   100.000 r  
+    P23                                               0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.769   100.769 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.040   102.809    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113   102.922 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.514   104.436    DATAPATH_INST/Memory_ins/CLK
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/CLKARDCLK
+                         clock pessimism              0.267   104.703    
+                         clock uncertainty           -0.035   104.667    
+    RAMB18_X0Y14         RAMB18E1 (Setup_ramb18e1_CLKARDCLK_ADDRARDADDR[10])
+                                                     -0.479   104.188    DATAPATH_INST/Memory_ins/memory_reg
+  -------------------------------------------------------------------
+                         required time                        104.188    
+                         arrival time                         -13.532    
+  -------------------------------------------------------------------
+                         slack                                 90.656    
+
+Slack (MET) :             91.119ns  (required time - arrival time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Memory_ins/memory_reg/ADDRBWRADDR[8]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk rise@100.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.310ns  (logic 2.053ns (24.705%)  route 6.257ns (75.295%))
+  Logic Levels:           13  (CARRY4=5 LUT2=3 LUT3=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.433ns = ( 104.433 - 100.000 ) 
+    Source Clock Delay      (SCD):    4.757ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.845     0.845 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.140     2.985    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.105 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.652     4.757    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDCE (Prop_fdce_C_Q)         0.308     5.065 r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/Q
+                         net (fo=56, routed)          1.659     6.724    DATAPATH_INST/COUNTER_I/Q[1]
+    SLICE_X8Y32          LUT3 (Prop_lut3_I2_O)        0.066     6.790 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9/O
+                         net (fo=11, routed)          0.837     7.627    DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9_n_0
+    SLICE_X7Y30          LUT6 (Prop_lut6_I3_O)        0.168     7.795 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_1/O
+                         net (fo=2, routed)           0.453     8.248    DATAPATH_INST/COUNTER_I/counter_value_reg[3]_0[2]
+    SLICE_X6Y30          LUT6 (Prop_lut6_I0_O)        0.053     8.301 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.301    DATAPATH_INST/COUNTER_I_n_30
+    SLICE_X6Y30          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.138     8.439 r  DATAPATH_INST/addr_B1__0_carry/O[3]
+                         net (fo=2, routed)           0.441     8.880    DATAPATH_INST/addr_B1__0_carry_n_4
+    SLICE_X6Y32          LUT2 (Prop_lut2_I0_O)        0.142     9.022 r  DATAPATH_INST/addr_B1__35_carry_i_5/O
+                         net (fo=1, routed)           0.000     9.022    DATAPATH_INST/addr_B1__35_carry_i_5_n_0
+    SLICE_X6Y32          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.143     9.165 r  DATAPATH_INST/addr_B1__35_carry/O[0]
+                         net (fo=1, routed)           0.547     9.711    DATAPATH_INST/addr_B1[3]
+    SLICE_X7Y31          LUT2 (Prop_lut2_I1_O)        0.153     9.864 r  DATAPATH_INST/addr_B0_carry_i_1/O
+                         net (fo=1, routed)           0.000     9.864    DATAPATH_INST/addr_B0_carry_i_1_n_0
+    SLICE_X7Y31          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233    10.097 r  DATAPATH_INST/addr_B0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.097    DATAPATH_INST/addr_B0_carry_n_0
+    SLICE_X7Y32          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.139    10.236 r  DATAPATH_INST/addr_B0_carry__0/O[0]
+                         net (fo=5, routed)           0.792    11.029    DATAPATH_INST/COUNTER_J/addr_B0[4]
+    SLICE_X0Y31          LUT2 (Prop_lut2_I0_O)        0.155    11.184 r  DATAPATH_INST/COUNTER_J/addr_B_carry__0_i_4/O
+                         net (fo=1, routed)           0.000    11.184    DATAPATH_INST/COUNTER_J_n_26
+    SLICE_X0Y31          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.147    11.331 r  DATAPATH_INST/addr_B_carry__0/O[0]
+                         net (fo=1, routed)           0.412    11.743    CONTROLLER_INST/addr_B[4]
+    SLICE_X0Y32          LUT5 (Prop_lut5_I0_O)        0.155    11.898 r  CONTROLLER_INST/memory_reg_i_39/O
+                         net (fo=1, routed)           0.457    12.355    CONTROLLER_INST/memory_reg_i_39_n_0
+    SLICE_X0Y32          LUT6 (Prop_lut6_I3_O)        0.053    12.408 r  CONTROLLER_INST/memory_reg_i_6/O
+                         net (fo=2, routed)           0.659    13.067    DATAPATH_INST/Memory_ins/ADDRARDADDR[4]
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/ADDRBWRADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)      100.000   100.000 r  
+    P23                                               0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.769   100.769 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.040   102.809    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113   102.922 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.512   104.434    DATAPATH_INST/Memory_ins/CLK
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/CLKBWRCLK
+                         clock pessimism              0.267   104.701    
+                         clock uncertainty           -0.035   104.665    
+    RAMB18_X0Y14         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_ADDRBWRADDR[8])
+                                                     -0.479   104.186    DATAPATH_INST/Memory_ins/memory_reg
+  -------------------------------------------------------------------
+                         required time                        104.186    
+                         arrival time                         -13.067    
+  -------------------------------------------------------------------
+                         slack                                 91.119    
+
+Slack (MET) :             91.120ns  (required time - arrival time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Memory_ins/memory_reg/ADDRARDADDR[8]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk rise@100.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.311ns  (logic 2.053ns (24.701%)  route 6.258ns (75.299%))
+  Logic Levels:           13  (CARRY4=5 LUT2=3 LUT3=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.435ns = ( 104.435 - 100.000 ) 
+    Source Clock Delay      (SCD):    4.757ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.845     0.845 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.140     2.985    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.105 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.652     4.757    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDCE (Prop_fdce_C_Q)         0.308     5.065 r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/Q
+                         net (fo=56, routed)          1.659     6.724    DATAPATH_INST/COUNTER_I/Q[1]
+    SLICE_X8Y32          LUT3 (Prop_lut3_I2_O)        0.066     6.790 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9/O
+                         net (fo=11, routed)          0.837     7.627    DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9_n_0
+    SLICE_X7Y30          LUT6 (Prop_lut6_I3_O)        0.168     7.795 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_1/O
+                         net (fo=2, routed)           0.453     8.248    DATAPATH_INST/COUNTER_I/counter_value_reg[3]_0[2]
+    SLICE_X6Y30          LUT6 (Prop_lut6_I0_O)        0.053     8.301 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.301    DATAPATH_INST/COUNTER_I_n_30
+    SLICE_X6Y30          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.138     8.439 r  DATAPATH_INST/addr_B1__0_carry/O[3]
+                         net (fo=2, routed)           0.441     8.880    DATAPATH_INST/addr_B1__0_carry_n_4
+    SLICE_X6Y32          LUT2 (Prop_lut2_I0_O)        0.142     9.022 r  DATAPATH_INST/addr_B1__35_carry_i_5/O
+                         net (fo=1, routed)           0.000     9.022    DATAPATH_INST/addr_B1__35_carry_i_5_n_0
+    SLICE_X6Y32          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.143     9.165 r  DATAPATH_INST/addr_B1__35_carry/O[0]
+                         net (fo=1, routed)           0.547     9.711    DATAPATH_INST/addr_B1[3]
+    SLICE_X7Y31          LUT2 (Prop_lut2_I1_O)        0.153     9.864 r  DATAPATH_INST/addr_B0_carry_i_1/O
+                         net (fo=1, routed)           0.000     9.864    DATAPATH_INST/addr_B0_carry_i_1_n_0
+    SLICE_X7Y31          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233    10.097 r  DATAPATH_INST/addr_B0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.097    DATAPATH_INST/addr_B0_carry_n_0
+    SLICE_X7Y32          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.139    10.236 r  DATAPATH_INST/addr_B0_carry__0/O[0]
+                         net (fo=5, routed)           0.792    11.029    DATAPATH_INST/COUNTER_J/addr_B0[4]
+    SLICE_X0Y31          LUT2 (Prop_lut2_I0_O)        0.155    11.184 r  DATAPATH_INST/COUNTER_J/addr_B_carry__0_i_4/O
+                         net (fo=1, routed)           0.000    11.184    DATAPATH_INST/COUNTER_J_n_26
+    SLICE_X0Y31          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.147    11.331 r  DATAPATH_INST/addr_B_carry__0/O[0]
+                         net (fo=1, routed)           0.412    11.743    CONTROLLER_INST/addr_B[4]
+    SLICE_X0Y32          LUT5 (Prop_lut5_I0_O)        0.155    11.898 r  CONTROLLER_INST/memory_reg_i_39/O
+                         net (fo=1, routed)           0.457    12.355    CONTROLLER_INST/memory_reg_i_39_n_0
+    SLICE_X0Y32          LUT6 (Prop_lut6_I3_O)        0.053    12.408 r  CONTROLLER_INST/memory_reg_i_6/O
+                         net (fo=2, routed)           0.661    13.068    DATAPATH_INST/Memory_ins/ADDRARDADDR[4]
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/ADDRARDADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)      100.000   100.000 r  
+    P23                                               0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.769   100.769 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.040   102.809    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113   102.922 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.514   104.436    DATAPATH_INST/Memory_ins/CLK
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/CLKARDCLK
+                         clock pessimism              0.267   104.703    
+                         clock uncertainty           -0.035   104.667    
+    RAMB18_X0Y14         RAMB18E1 (Setup_ramb18e1_CLKARDCLK_ADDRARDADDR[8])
+                                                     -0.479   104.188    DATAPATH_INST/Memory_ins/memory_reg
+  -------------------------------------------------------------------
+                         required time                        104.188    
+                         arrival time                         -13.068    
+  -------------------------------------------------------------------
+                         slack                                 91.120    
+
+Slack (MET) :             91.244ns  (required time - arrival time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Memory_ins/memory_reg/ADDRBWRADDR[9]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk rise@100.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.185ns  (logic 1.822ns (22.260%)  route 6.363ns (77.740%))
+  Logic Levels:           11  (CARRY4=4 LUT2=2 LUT3=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.433ns = ( 104.433 - 100.000 ) 
+    Source Clock Delay      (SCD):    4.757ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.845     0.845 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.140     2.985    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.105 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.652     4.757    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDCE (Prop_fdce_C_Q)         0.308     5.065 r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/Q
+                         net (fo=56, routed)          1.659     6.724    DATAPATH_INST/COUNTER_I/Q[1]
+    SLICE_X8Y32          LUT3 (Prop_lut3_I2_O)        0.066     6.790 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9/O
+                         net (fo=11, routed)          0.837     7.627    DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9_n_0
+    SLICE_X7Y30          LUT6 (Prop_lut6_I3_O)        0.168     7.795 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_1/O
+                         net (fo=2, routed)           0.453     8.248    DATAPATH_INST/COUNTER_I/counter_value_reg[3]_0[2]
+    SLICE_X6Y30          LUT6 (Prop_lut6_I0_O)        0.053     8.301 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.301    DATAPATH_INST/COUNTER_I_n_30
+    SLICE_X6Y30          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.138     8.439 r  DATAPATH_INST/addr_B1__0_carry/O[3]
+                         net (fo=2, routed)           0.441     8.880    DATAPATH_INST/addr_B1__0_carry_n_4
+    SLICE_X6Y32          LUT2 (Prop_lut2_I0_O)        0.142     9.022 r  DATAPATH_INST/addr_B1__35_carry_i_5/O
+                         net (fo=1, routed)           0.000     9.022    DATAPATH_INST/addr_B1__35_carry_i_5_n_0
+    SLICE_X6Y32          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.143     9.165 r  DATAPATH_INST/addr_B1__35_carry/O[0]
+                         net (fo=1, routed)           0.547     9.711    DATAPATH_INST/addr_B1[3]
+    SLICE_X7Y31          LUT2 (Prop_lut2_I1_O)        0.153     9.864 r  DATAPATH_INST/addr_B0_carry_i_1/O
+                         net (fo=1, routed)           0.000     9.864    DATAPATH_INST/addr_B0_carry_i_1_n_0
+    SLICE_X7Y31          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233    10.097 r  DATAPATH_INST/addr_B0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.097    DATAPATH_INST/addr_B0_carry_n_0
+    SLICE_X7Y32          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.213    10.310 r  DATAPATH_INST/addr_B0_carry__0/O[1]
+                         net (fo=5, routed)           0.912    11.222    DATAPATH_INST/Memory_ins/addr_B0[5]
+    SLICE_X1Y32          LUT5 (Prop_lut5_I4_O)        0.152    11.374 r  DATAPATH_INST/Memory_ins/memory_reg_i_34/O
+                         net (fo=1, routed)           0.761    12.135    CONTROLLER_INST/memory_reg_4
+    SLICE_X0Y32          LUT6 (Prop_lut6_I0_O)        0.053    12.188 r  CONTROLLER_INST/memory_reg_i_5/O
+                         net (fo=2, routed)           0.754    12.942    DATAPATH_INST/Memory_ins/ADDRARDADDR[5]
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/ADDRBWRADDR[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)      100.000   100.000 r  
+    P23                                               0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.769   100.769 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.040   102.809    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113   102.922 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.512   104.434    DATAPATH_INST/Memory_ins/CLK
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/CLKBWRCLK
+                         clock pessimism              0.267   104.701    
+                         clock uncertainty           -0.035   104.665    
+    RAMB18_X0Y14         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_ADDRBWRADDR[9])
+                                                     -0.479   104.186    DATAPATH_INST/Memory_ins/memory_reg
+  -------------------------------------------------------------------
+                         required time                        104.186    
+                         arrival time                         -12.942    
+  -------------------------------------------------------------------
+                         slack                                 91.244    
+
+Slack (MET) :             91.245ns  (required time - arrival time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Memory_ins/memory_reg/ADDRARDADDR[9]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk rise@100.000ns - clk rise@0.000ns)
+  Data Path Delay:        8.186ns  (logic 1.822ns (22.257%)  route 6.364ns (77.743%))
+  Logic Levels:           11  (CARRY4=4 LUT2=2 LUT3=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.435ns = ( 104.435 - 100.000 ) 
+    Source Clock Delay      (SCD):    4.757ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.845     0.845 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.140     2.985    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.105 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.652     4.757    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDCE (Prop_fdce_C_Q)         0.308     5.065 r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/Q
+                         net (fo=56, routed)          1.659     6.724    DATAPATH_INST/COUNTER_I/Q[1]
+    SLICE_X8Y32          LUT3 (Prop_lut3_I2_O)        0.066     6.790 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9/O
+                         net (fo=11, routed)          0.837     7.627    DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9_n_0
+    SLICE_X7Y30          LUT6 (Prop_lut6_I3_O)        0.168     7.795 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_1/O
+                         net (fo=2, routed)           0.453     8.248    DATAPATH_INST/COUNTER_I/counter_value_reg[3]_0[2]
+    SLICE_X6Y30          LUT6 (Prop_lut6_I0_O)        0.053     8.301 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.301    DATAPATH_INST/COUNTER_I_n_30
+    SLICE_X6Y30          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.138     8.439 r  DATAPATH_INST/addr_B1__0_carry/O[3]
+                         net (fo=2, routed)           0.441     8.880    DATAPATH_INST/addr_B1__0_carry_n_4
+    SLICE_X6Y32          LUT2 (Prop_lut2_I0_O)        0.142     9.022 r  DATAPATH_INST/addr_B1__35_carry_i_5/O
+                         net (fo=1, routed)           0.000     9.022    DATAPATH_INST/addr_B1__35_carry_i_5_n_0
+    SLICE_X6Y32          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.143     9.165 r  DATAPATH_INST/addr_B1__35_carry/O[0]
+                         net (fo=1, routed)           0.547     9.711    DATAPATH_INST/addr_B1[3]
+    SLICE_X7Y31          LUT2 (Prop_lut2_I1_O)        0.153     9.864 r  DATAPATH_INST/addr_B0_carry_i_1/O
+                         net (fo=1, routed)           0.000     9.864    DATAPATH_INST/addr_B0_carry_i_1_n_0
+    SLICE_X7Y31          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233    10.097 r  DATAPATH_INST/addr_B0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.097    DATAPATH_INST/addr_B0_carry_n_0
+    SLICE_X7Y32          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.213    10.310 r  DATAPATH_INST/addr_B0_carry__0/O[1]
+                         net (fo=5, routed)           0.912    11.222    DATAPATH_INST/Memory_ins/addr_B0[5]
+    SLICE_X1Y32          LUT5 (Prop_lut5_I4_O)        0.152    11.374 r  DATAPATH_INST/Memory_ins/memory_reg_i_34/O
+                         net (fo=1, routed)           0.761    12.135    CONTROLLER_INST/memory_reg_4
+    SLICE_X0Y32          LUT6 (Prop_lut6_I0_O)        0.053    12.188 r  CONTROLLER_INST/memory_reg_i_5/O
+                         net (fo=2, routed)           0.756    12.943    DATAPATH_INST/Memory_ins/ADDRARDADDR[5]
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/ADDRARDADDR[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)      100.000   100.000 r  
+    P23                                               0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.769   100.769 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.040   102.809    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113   102.922 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.514   104.436    DATAPATH_INST/Memory_ins/CLK
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/CLKARDCLK
+                         clock pessimism              0.267   104.703    
+                         clock uncertainty           -0.035   104.667    
+    RAMB18_X0Y14         RAMB18E1 (Setup_ramb18e1_CLKARDCLK_ADDRARDADDR[9])
+                                                     -0.479   104.188    DATAPATH_INST/Memory_ins/memory_reg
+  -------------------------------------------------------------------
+                         required time                        104.188    
+                         arrival time                         -12.943    
+  -------------------------------------------------------------------
+                         slack                                 91.245    
+
+Slack (MET) :             91.619ns  (required time - arrival time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Memory_ins/memory_reg/ADDRBWRADDR[7]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk rise@100.000ns - clk rise@0.000ns)
+  Data Path Delay:        7.810ns  (logic 1.788ns (22.894%)  route 6.022ns (77.106%))
+  Logic Levels:           12  (CARRY4=4 LUT2=3 LUT3=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.433ns = ( 104.433 - 100.000 ) 
+    Source Clock Delay      (SCD):    4.757ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.845     0.845 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.140     2.985    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.105 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.652     4.757    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDCE (Prop_fdce_C_Q)         0.308     5.065 r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/Q
+                         net (fo=56, routed)          1.659     6.724    DATAPATH_INST/COUNTER_I/Q[1]
+    SLICE_X8Y32          LUT3 (Prop_lut3_I2_O)        0.066     6.790 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9/O
+                         net (fo=11, routed)          0.837     7.627    DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9_n_0
+    SLICE_X7Y30          LUT6 (Prop_lut6_I3_O)        0.168     7.795 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_1/O
+                         net (fo=2, routed)           0.453     8.248    DATAPATH_INST/COUNTER_I/counter_value_reg[3]_0[2]
+    SLICE_X6Y30          LUT6 (Prop_lut6_I0_O)        0.053     8.301 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.301    DATAPATH_INST/COUNTER_I_n_30
+    SLICE_X6Y30          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.138     8.439 r  DATAPATH_INST/addr_B1__0_carry/O[3]
+                         net (fo=2, routed)           0.441     8.880    DATAPATH_INST/addr_B1__0_carry_n_4
+    SLICE_X6Y32          LUT2 (Prop_lut2_I0_O)        0.142     9.022 r  DATAPATH_INST/addr_B1__35_carry_i_5/O
+                         net (fo=1, routed)           0.000     9.022    DATAPATH_INST/addr_B1__35_carry_i_5_n_0
+    SLICE_X6Y32          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.143     9.165 r  DATAPATH_INST/addr_B1__35_carry/O[0]
+                         net (fo=1, routed)           0.547     9.711    DATAPATH_INST/addr_B1[3]
+    SLICE_X7Y31          LUT2 (Prop_lut2_I1_O)        0.153     9.864 r  DATAPATH_INST/addr_B0_carry_i_1/O
+                         net (fo=1, routed)           0.000     9.864    DATAPATH_INST/addr_B0_carry_i_1_n_0
+    SLICE_X7Y31          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.140    10.004 r  DATAPATH_INST/addr_B0_carry/O[3]
+                         net (fo=5, routed)           0.395    10.399    DATAPATH_INST/COUNTER_J/addr_B0[3]
+    SLICE_X0Y30          LUT2 (Prop_lut2_I0_O)        0.142    10.541 r  DATAPATH_INST/COUNTER_J/addr_B_carry_i_1/O
+                         net (fo=1, routed)           0.000    10.541    DATAPATH_INST/COUNTER_J_n_48
+    SLICE_X0Y30          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.140    10.681 r  DATAPATH_INST/addr_B_carry/O[3]
+                         net (fo=1, routed)           0.445    11.126    CONTROLLER_INST/addr_B[3]
+    SLICE_X1Y30          LUT5 (Prop_lut5_I0_O)        0.142    11.268 r  CONTROLLER_INST/memory_reg_i_41/O
+                         net (fo=1, routed)           0.456    11.724    CONTROLLER_INST/memory_reg_i_41_n_0
+    SLICE_X1Y30          LUT6 (Prop_lut6_I2_O)        0.053    11.777 r  CONTROLLER_INST/memory_reg_i_7/O
+                         net (fo=2, routed)           0.790    12.567    DATAPATH_INST/Memory_ins/ADDRARDADDR[3]
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/ADDRBWRADDR[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)      100.000   100.000 r  
+    P23                                               0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.769   100.769 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.040   102.809    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113   102.922 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.512   104.434    DATAPATH_INST/Memory_ins/CLK
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/CLKBWRCLK
+                         clock pessimism              0.267   104.701    
+                         clock uncertainty           -0.035   104.665    
+    RAMB18_X0Y14         RAMB18E1 (Setup_ramb18e1_CLKBWRCLK_ADDRBWRADDR[7])
+                                                     -0.479   104.186    DATAPATH_INST/Memory_ins/memory_reg
+  -------------------------------------------------------------------
+                         required time                        104.186    
+                         arrival time                         -12.567    
+  -------------------------------------------------------------------
+                         slack                                 91.619    
+
+Slack (MET) :             91.620ns  (required time - arrival time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Memory_ins/memory_reg/ADDRARDADDR[7]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (clk rise@100.000ns - clk rise@0.000ns)
+  Data Path Delay:        7.811ns  (logic 1.788ns (22.890%)  route 6.023ns (77.110%))
+  Logic Levels:           12  (CARRY4=4 LUT2=3 LUT3=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.435ns = ( 104.435 - 100.000 ) 
+    Source Clock Delay      (SCD):    4.757ns
+    Clock Pessimism Removal (CPR):    0.267ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.845     0.845 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.140     2.985    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.105 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.652     4.757    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y38          FDCE (Prop_fdce_C_Q)         0.308     5.065 r  DATAPATH_INST/COUNTER_I/counter_value_reg[1]/Q
+                         net (fo=56, routed)          1.659     6.724    DATAPATH_INST/COUNTER_I/Q[1]
+    SLICE_X8Y32          LUT3 (Prop_lut3_I2_O)        0.066     6.790 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9/O
+                         net (fo=11, routed)          0.837     7.627    DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_9_n_0
+    SLICE_X7Y30          LUT6 (Prop_lut6_I3_O)        0.168     7.795 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_1/O
+                         net (fo=2, routed)           0.453     8.248    DATAPATH_INST/COUNTER_I/counter_value_reg[3]_0[2]
+    SLICE_X6Y30          LUT6 (Prop_lut6_I0_O)        0.053     8.301 r  DATAPATH_INST/COUNTER_I/addr_B1__0_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.301    DATAPATH_INST/COUNTER_I_n_30
+    SLICE_X6Y30          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.138     8.439 r  DATAPATH_INST/addr_B1__0_carry/O[3]
+                         net (fo=2, routed)           0.441     8.880    DATAPATH_INST/addr_B1__0_carry_n_4
+    SLICE_X6Y32          LUT2 (Prop_lut2_I0_O)        0.142     9.022 r  DATAPATH_INST/addr_B1__35_carry_i_5/O
+                         net (fo=1, routed)           0.000     9.022    DATAPATH_INST/addr_B1__35_carry_i_5_n_0
+    SLICE_X6Y32          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.143     9.165 r  DATAPATH_INST/addr_B1__35_carry/O[0]
+                         net (fo=1, routed)           0.547     9.711    DATAPATH_INST/addr_B1[3]
+    SLICE_X7Y31          LUT2 (Prop_lut2_I1_O)        0.153     9.864 r  DATAPATH_INST/addr_B0_carry_i_1/O
+                         net (fo=1, routed)           0.000     9.864    DATAPATH_INST/addr_B0_carry_i_1_n_0
+    SLICE_X7Y31          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.140    10.004 r  DATAPATH_INST/addr_B0_carry/O[3]
+                         net (fo=5, routed)           0.395    10.399    DATAPATH_INST/COUNTER_J/addr_B0[3]
+    SLICE_X0Y30          LUT2 (Prop_lut2_I0_O)        0.142    10.541 r  DATAPATH_INST/COUNTER_J/addr_B_carry_i_1/O
+                         net (fo=1, routed)           0.000    10.541    DATAPATH_INST/COUNTER_J_n_48
+    SLICE_X0Y30          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.140    10.681 r  DATAPATH_INST/addr_B_carry/O[3]
+                         net (fo=1, routed)           0.445    11.126    CONTROLLER_INST/addr_B[3]
+    SLICE_X1Y30          LUT5 (Prop_lut5_I0_O)        0.142    11.268 r  CONTROLLER_INST/memory_reg_i_41/O
+                         net (fo=1, routed)           0.456    11.724    CONTROLLER_INST/memory_reg_i_41_n_0
+    SLICE_X1Y30          LUT6 (Prop_lut6_I2_O)        0.053    11.777 r  CONTROLLER_INST/memory_reg_i_7/O
+                         net (fo=2, routed)           0.792    12.568    DATAPATH_INST/Memory_ins/ADDRARDADDR[3]
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/ADDRARDADDR[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)      100.000   100.000 r  
+    P23                                               0.000   100.000 r  clk (IN)
+                         net (fo=0)                   0.000   100.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.769   100.769 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.040   102.809    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113   102.922 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         1.514   104.436    DATAPATH_INST/Memory_ins/CLK
+    RAMB18_X0Y14         RAMB18E1                                     r  DATAPATH_INST/Memory_ins/memory_reg/CLKARDCLK
+                         clock pessimism              0.267   104.703    
+                         clock uncertainty           -0.035   104.667    
+    RAMB18_X0Y14         RAMB18E1 (Setup_ramb18e1_CLKARDCLK_ADDRARDADDR[7])
+                                                     -0.479   104.188    DATAPATH_INST/Memory_ins/memory_reg
+  -------------------------------------------------------------------
+                         required time                        104.188    
+                         arrival time                         -12.568    
+  -------------------------------------------------------------------
+                         slack                                 91.620    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.156ns  (arrival time - required time)
+  Source:                 DATAPATH_INST/COUNTER_I/counter_value_reg[6]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/COUNTER_I/counter_value_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.254ns  (logic 0.128ns (50.301%)  route 0.126ns (49.699%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.167ns
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.528ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.109     0.109 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.863     0.972    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.998 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.630     1.628    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X7Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y38          FDCE (Prop_fdce_C_Q)         0.100     1.728 r  DATAPATH_INST/COUNTER_I/counter_value_reg[6]/Q
+                         net (fo=11, routed)          0.126     1.854    DATAPATH_INST/COUNTER_I/Q[3]
+    SLICE_X6Y38          LUT5 (Prop_lut5_I2_O)        0.028     1.882 r  DATAPATH_INST/COUNTER_I/counter_value[7]_i_1/O
+                         net (fo=1, routed)           0.000     1.882    DATAPATH_INST/COUNTER_I/p_1_in[7]
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.357     0.357 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.928     1.285    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.315 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.852     2.167    DATAPATH_INST/COUNTER_I/CLK
+    SLICE_X6Y38          FDCE                                         r  DATAPATH_INST/COUNTER_I/counter_value_reg[7]/C
+                         clock pessimism             -0.528     1.639    
+    SLICE_X6Y38          FDCE (Hold_fdce_C_D)         0.087     1.726    DATAPATH_INST/COUNTER_I/counter_value_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.726    
+                         arrival time                           1.882    
+  -------------------------------------------------------------------
+                         slack                                  0.156    
+
+Slack (MET) :             0.160ns  (arrival time - required time)
+  Source:                 DATAPATH_INST/REGA/Q_reg[13]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Cmpute/res_int_reg[13]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.242ns  (logic 0.177ns (73.201%)  route 0.065ns (26.799%))
+  Logic Levels:           2  (CARRY4=1 LUT6=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.168ns
+    Source Clock Delay      (SCD):    1.630ns
+    Clock Pessimism Removal (CPR):    0.527ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.109     0.109 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.863     0.972    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.998 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.632     1.630    DATAPATH_INST/REGA/CLK
+    SLICE_X0Y39          FDCE                                         r  DATAPATH_INST/REGA/Q_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y39          FDCE (Prop_fdce_C_Q)         0.100     1.730 r  DATAPATH_INST/REGA/Q_reg[13]/Q
+                         net (fo=2, routed)           0.065     1.795    DATAPATH_INST/REGD/res_int_reg[15][13]
+    SLICE_X1Y39          LUT6 (Prop_lut6_I2_O)        0.028     1.823 r  DATAPATH_INST/REGD/res_int0__0_carry__2_i_6/O
+                         net (fo=1, routed)           0.000     1.823    DATAPATH_INST/Cmpute/res_int_reg[15]_1[1]
+    SLICE_X1Y39          CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.049     1.872 r  DATAPATH_INST/Cmpute/res_int0__0_carry__2/O[1]
+                         net (fo=1, routed)           0.000     1.872    DATAPATH_INST/Cmpute/res_int0[13]
+    SLICE_X1Y39          FDCE                                         r  DATAPATH_INST/Cmpute/res_int_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.357     0.357 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.928     1.285    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.315 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.853     2.168    DATAPATH_INST/Cmpute/CLK
+    SLICE_X1Y39          FDCE                                         r  DATAPATH_INST/Cmpute/res_int_reg[13]/C
+                         clock pessimism             -0.527     1.641    
+    SLICE_X1Y39          FDCE (Hold_fdce_C_D)         0.071     1.712    DATAPATH_INST/Cmpute/res_int_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.712    
+                         arrival time                           1.872    
+  -------------------------------------------------------------------
+                         slack                                  0.160    
+
+Slack (MET) :             0.160ns  (arrival time - required time)
+  Source:                 DATAPATH_INST/REGA/Q_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Cmpute/res_int_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.242ns  (logic 0.177ns (73.201%)  route 0.065ns (26.799%))
+  Logic Levels:           2  (CARRY4=1 LUT6=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.165ns
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.526ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.109     0.109 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.863     0.972    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.998 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.630     1.628    DATAPATH_INST/REGA/CLK
+    SLICE_X0Y36          FDCE                                         r  DATAPATH_INST/REGA/Q_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y36          FDCE (Prop_fdce_C_Q)         0.100     1.728 r  DATAPATH_INST/REGA/Q_reg[3]/Q
+                         net (fo=2, routed)           0.065     1.793    DATAPATH_INST/REGD/res_int_reg[15][3]
+    SLICE_X1Y36          LUT6 (Prop_lut6_I2_O)        0.028     1.821 r  DATAPATH_INST/REGD/res_int0__0_carry_i_5/O
+                         net (fo=1, routed)           0.000     1.821    DATAPATH_INST/Cmpute/S[3]
+    SLICE_X1Y36          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.049     1.870 r  DATAPATH_INST/Cmpute/res_int0__0_carry/O[3]
+                         net (fo=1, routed)           0.000     1.870    DATAPATH_INST/Cmpute/res_int0[3]
+    SLICE_X1Y36          FDCE                                         r  DATAPATH_INST/Cmpute/res_int_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.357     0.357 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.928     1.285    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.315 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.850     2.165    DATAPATH_INST/Cmpute/CLK
+    SLICE_X1Y36          FDCE                                         r  DATAPATH_INST/Cmpute/res_int_reg[3]/C
+                         clock pessimism             -0.526     1.639    
+    SLICE_X1Y36          FDCE (Hold_fdce_C_D)         0.071     1.710    DATAPATH_INST/Cmpute/res_int_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.710    
+                         arrival time                           1.870    
+  -------------------------------------------------------------------
+                         slack                                  0.160    
+
+Slack (MET) :             0.169ns  (arrival time - required time)
+  Source:                 CONTROLLER_INST/FSM_onehot_STATE_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            CONTROLLER_INST/FSM_onehot_STATE_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.244ns  (logic 0.157ns (64.382%)  route 0.087ns (35.618%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.166ns
+    Source Clock Delay      (SCD):    1.629ns
+    Clock Pessimism Removal (CPR):    0.537ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.109     0.109 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.863     0.972    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.998 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.631     1.629    CONTROLLER_INST/CLK
+    SLICE_X3Y37          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y37          FDCE (Prop_fdce_C_Q)         0.091     1.720 r  CONTROLLER_INST/FSM_onehot_STATE_reg[12]/Q
+                         net (fo=3, routed)           0.087     1.807    CONTROLLER_INST/p_0_in3_in
+    SLICE_X3Y37          LUT2 (Prop_lut2_I0_O)        0.066     1.873 r  CONTROLLER_INST/FSM_onehot_STATE[9]_i_1/O
+                         net (fo=1, routed)           0.000     1.873    CONTROLLER_INST/FSM_onehot_STATE[9]_i_1_n_0
+    SLICE_X3Y37          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.357     0.357 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.928     1.285    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.315 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.851     2.166    CONTROLLER_INST/CLK
+    SLICE_X3Y37          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[9]/C
+                         clock pessimism             -0.537     1.629    
+    SLICE_X3Y37          FDCE (Hold_fdce_C_D)         0.075     1.704    CONTROLLER_INST/FSM_onehot_STATE_reg[9]
+  -------------------------------------------------------------------
+                         required time                         -1.704    
+                         arrival time                           1.873    
+  -------------------------------------------------------------------
+                         slack                                  0.169    
+
+Slack (MET) :             0.182ns  (arrival time - required time)
+  Source:                 CONTROLLER_INST/FSM_onehot_STATE_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            CONTROLLER_INST/FSM_onehot_STATE_reg[10]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.242ns  (logic 0.155ns (64.088%)  route 0.087ns (35.912%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.166ns
+    Source Clock Delay      (SCD):    1.629ns
+    Clock Pessimism Removal (CPR):    0.537ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.109     0.109 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.863     0.972    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.998 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.631     1.629    CONTROLLER_INST/CLK
+    SLICE_X3Y37          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y37          FDCE (Prop_fdce_C_Q)         0.091     1.720 r  CONTROLLER_INST/FSM_onehot_STATE_reg[12]/Q
+                         net (fo=3, routed)           0.087     1.807    CONTROLLER_INST/p_0_in3_in
+    SLICE_X3Y37          LUT5 (Prop_lut5_I1_O)        0.064     1.871 r  CONTROLLER_INST/FSM_onehot_STATE[10]_i_1/O
+                         net (fo=1, routed)           0.000     1.871    CONTROLLER_INST/FSM_onehot_STATE[10]_i_1_n_0
+    SLICE_X3Y37          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.357     0.357 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.928     1.285    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.315 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.851     2.166    CONTROLLER_INST/CLK
+    SLICE_X3Y37          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[10]/C
+                         clock pessimism             -0.537     1.629    
+    SLICE_X3Y37          FDCE (Hold_fdce_C_D)         0.060     1.689    CONTROLLER_INST/FSM_onehot_STATE_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -1.689    
+                         arrival time                           1.871    
+  -------------------------------------------------------------------
+                         slack                                  0.182    
+
+Slack (MET) :             0.184ns  (arrival time - required time)
+  Source:                 DATAPATH_INST/REGA/Q_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Cmpute/res_int_reg[15]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.266ns  (logic 0.177ns (66.475%)  route 0.089ns (33.525%))
+  Logic Levels:           2  (CARRY4=1 LUT6=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.168ns
+    Source Clock Delay      (SCD):    1.630ns
+    Clock Pessimism Removal (CPR):    0.527ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.109     0.109 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.863     0.972    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.998 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.632     1.630    DATAPATH_INST/REGA/CLK
+    SLICE_X0Y39          FDCE                                         r  DATAPATH_INST/REGA/Q_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y39          FDCE (Prop_fdce_C_Q)         0.100     1.730 r  DATAPATH_INST/REGA/Q_reg[14]/Q
+                         net (fo=2, routed)           0.089     1.819    DATAPATH_INST/REGB/res_int_reg[15]_1[1]
+    SLICE_X1Y39          LUT6 (Prop_lut6_I1_O)        0.028     1.847 r  DATAPATH_INST/REGB/res_int0__0_carry__2_i_4/O
+                         net (fo=1, routed)           0.000     1.847    DATAPATH_INST/Cmpute/res_int_reg[15]_1[3]
+    SLICE_X1Y39          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.049     1.896 r  DATAPATH_INST/Cmpute/res_int0__0_carry__2/O[3]
+                         net (fo=1, routed)           0.000     1.896    DATAPATH_INST/Cmpute/res_int0[15]
+    SLICE_X1Y39          FDCE                                         r  DATAPATH_INST/Cmpute/res_int_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.357     0.357 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.928     1.285    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.315 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.853     2.168    DATAPATH_INST/Cmpute/CLK
+    SLICE_X1Y39          FDCE                                         r  DATAPATH_INST/Cmpute/res_int_reg[15]/C
+                         clock pessimism             -0.527     1.641    
+    SLICE_X1Y39          FDCE (Hold_fdce_C_D)         0.071     1.712    DATAPATH_INST/Cmpute/res_int_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.712    
+                         arrival time                           1.896    
+  -------------------------------------------------------------------
+                         slack                                  0.184    
+
+Slack (MET) :             0.186ns  (arrival time - required time)
+  Source:                 DATAPATH_INST/REGA/Q_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/Cmpute/res_int_reg[14]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.268ns  (logic 0.179ns (66.725%)  route 0.089ns (33.275%))
+  Logic Levels:           2  (CARRY4=1 LUT6=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.168ns
+    Source Clock Delay      (SCD):    1.630ns
+    Clock Pessimism Removal (CPR):    0.527ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.109     0.109 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.863     0.972    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.998 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.632     1.630    DATAPATH_INST/REGA/CLK
+    SLICE_X0Y39          FDCE                                         r  DATAPATH_INST/REGA/Q_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y39          FDCE (Prop_fdce_C_Q)         0.100     1.730 r  DATAPATH_INST/REGA/Q_reg[14]/Q
+                         net (fo=2, routed)           0.089     1.819    DATAPATH_INST/REGD/res_int_reg[15][14]
+    SLICE_X1Y39          LUT6 (Prop_lut6_I2_O)        0.028     1.847 r  DATAPATH_INST/REGD/res_int0__0_carry__2_i_5/O
+                         net (fo=1, routed)           0.000     1.847    DATAPATH_INST/Cmpute/res_int_reg[15]_1[2]
+    SLICE_X1Y39          CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.051     1.898 r  DATAPATH_INST/Cmpute/res_int0__0_carry__2/O[2]
+                         net (fo=1, routed)           0.000     1.898    DATAPATH_INST/Cmpute/res_int0[14]
+    SLICE_X1Y39          FDCE                                         r  DATAPATH_INST/Cmpute/res_int_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.357     0.357 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.928     1.285    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.315 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.853     2.168    DATAPATH_INST/Cmpute/CLK
+    SLICE_X1Y39          FDCE                                         r  DATAPATH_INST/Cmpute/res_int_reg[14]/C
+                         clock pessimism             -0.527     1.641    
+    SLICE_X1Y39          FDCE (Hold_fdce_C_D)         0.071     1.712    DATAPATH_INST/Cmpute/res_int_reg[14]
+  -------------------------------------------------------------------
+                         required time                         -1.712    
+                         arrival time                           1.898    
+  -------------------------------------------------------------------
+                         slack                                  0.186    
+
+Slack (MET) :             0.187ns  (arrival time - required time)
+  Source:                 CONTROLLER_INST/FSM_onehot_STATE_reg[17]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            CONTROLLER_INST/FSM_onehot_STATE_reg[18]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.258ns  (logic 0.100ns (38.805%)  route 0.158ns (61.195%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.164ns
+    Source Clock Delay      (SCD):    1.626ns
+    Clock Pessimism Removal (CPR):    0.505ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.109     0.109 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.863     0.972    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.998 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.628     1.626    CONTROLLER_INST/CLK
+    SLICE_X4Y34          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y34          FDCE (Prop_fdce_C_Q)         0.100     1.726 r  CONTROLLER_INST/FSM_onehot_STATE_reg[17]/Q
+                         net (fo=19, routed)          0.158     1.884    CONTROLLER_INST/p_7_in
+    SLICE_X1Y34          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.357     0.357 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.928     1.285    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.315 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.849     2.164    CONTROLLER_INST/CLK
+    SLICE_X1Y34          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[18]/C
+                         clock pessimism             -0.505     1.659    
+    SLICE_X1Y34          FDCE (Hold_fdce_C_D)         0.038     1.697    CONTROLLER_INST/FSM_onehot_STATE_reg[18]
+  -------------------------------------------------------------------
+                         required time                         -1.697    
+                         arrival time                           1.884    
+  -------------------------------------------------------------------
+                         slack                                  0.187    
+
+Slack (MET) :             0.190ns  (arrival time - required time)
+  Source:                 CONTROLLER_INST/FSM_onehot_STATE_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            DATAPATH_INST/REGD/Q_reg[2]/CE
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.213ns  (logic 0.100ns (46.967%)  route 0.113ns (53.033%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.165ns
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.524ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.109     0.109 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.863     0.972    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.998 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.630     1.628    CONTROLLER_INST/CLK
+    SLICE_X1Y34          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y34          FDCE (Prop_fdce_C_Q)         0.100     1.728 r  CONTROLLER_INST/FSM_onehot_STATE_reg[2]/Q
+                         net (fo=17, routed)          0.113     1.841    DATAPATH_INST/REGD/Q_reg[0]_0[0]
+    SLICE_X0Y35          FDCE                                         r  DATAPATH_INST/REGD/Q_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.357     0.357 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.928     1.285    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.315 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.850     2.165    DATAPATH_INST/REGD/CLK
+    SLICE_X0Y35          FDCE                                         r  DATAPATH_INST/REGD/Q_reg[2]/C
+                         clock pessimism             -0.524     1.641    
+    SLICE_X0Y35          FDCE (Hold_fdce_C_CE)        0.010     1.651    DATAPATH_INST/REGD/Q_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.651    
+                         arrival time                           1.841    
+  -------------------------------------------------------------------
+                         slack                                  0.190    
+
+Slack (MET) :             0.200ns  (arrival time - required time)
+  Source:                 CONTROLLER_INST/FSM_onehot_STATE_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            CONTROLLER_INST/FSM_onehot_STATE_reg[19]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.303ns  (logic 0.128ns (42.272%)  route 0.175ns (57.728%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.169ns
+    Source Clock Delay      (SCD):    1.629ns
+    Clock Pessimism Removal (CPR):    0.524ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.109     0.109 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.863     0.972    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.998 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.631     1.629    CONTROLLER_INST/CLK
+    SLICE_X3Y37          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y37          FDCE (Prop_fdce_C_Q)         0.100     1.729 r  CONTROLLER_INST/FSM_onehot_STATE_reg[8]/Q
+                         net (fo=4, routed)           0.175     1.904    CONTROLLER_INST/FSM_onehot_STATE_reg[19]_0[5]
+    SLICE_X2Y40          LUT2 (Prop_lut2_I0_O)        0.028     1.932 r  CONTROLLER_INST/FSM_onehot_STATE[19]_i_1/O
+                         net (fo=1, routed)           0.000     1.932    CONTROLLER_INST/FSM_onehot_STATE[19]_i_1_n_0
+    SLICE_X2Y40          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    P23                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    P23                  IBUF (Prop_ibuf_I_O)         0.357     0.357 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.928     1.285    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.315 r  clk_IBUF_BUFG_inst/O
+                         net (fo=121, routed)         0.854     2.169    CONTROLLER_INST/CLK
+    SLICE_X2Y40          FDCE                                         r  CONTROLLER_INST/FSM_onehot_STATE_reg[19]/C
+                         clock pessimism             -0.524     1.645    
+    SLICE_X2Y40          FDCE (Hold_fdce_C_D)         0.087     1.732    CONTROLLER_INST/FSM_onehot_STATE_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -1.732    
+                         arrival time                           1.932    
+  -------------------------------------------------------------------
+                         slack                                  0.200    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 50.000 }
+Period(ns):         100.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.495         100.000     97.505     RAMB18_X0Y14   DATAPATH_INST/Memory_ins/memory_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.183         100.000     97.817     RAMB18_X0Y14   DATAPATH_INST/Memory_ins/memory_reg/CLKBWRCLK
+Min Period        n/a     BUFG/I              n/a            1.600         100.000     98.400     BUFGCTRL_X0Y0  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C              n/a            0.750         100.000     99.250     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[0]/C
+Min Period        n/a     FDCE/C              n/a            0.750         100.000     99.250     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[12]/C
+Min Period        n/a     FDCE/C              n/a            0.750         100.000     99.250     SLICE_X5Y39    CONTROLLER_INST/FSM_onehot_STATE_reg[13]/C
+Min Period        n/a     FDCE/C              n/a            0.750         100.000     99.250     SLICE_X5Y39    CONTROLLER_INST/FSM_onehot_STATE_reg[6]/C
+Min Period        n/a     FDCE/C              n/a            0.750         100.000     99.250     SLICE_X2Y40    CONTROLLER_INST/FSM_onehot_STATE_reg[6]_lopt_replica/C
+Min Period        n/a     FDCE/C              n/a            0.750         100.000     99.250     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[9]/C
+Min Period        n/a     FDCE/C              n/a            0.750         100.000     99.250     SLICE_X6Y37    DATAPATH_INST/COUNTER_I/counter_value_reg[0]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.400         50.000      49.600     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[0]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         50.000      49.600     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[0]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.400         50.000      49.600     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[12]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         50.000      49.600     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[12]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.400         50.000      49.600     SLICE_X5Y39    CONTROLLER_INST/FSM_onehot_STATE_reg[13]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         50.000      49.600     SLICE_X5Y39    CONTROLLER_INST/FSM_onehot_STATE_reg[13]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.400         50.000      49.600     SLICE_X5Y39    CONTROLLER_INST/FSM_onehot_STATE_reg[6]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         50.000      49.600     SLICE_X5Y39    CONTROLLER_INST/FSM_onehot_STATE_reg[6]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.400         50.000      49.600     SLICE_X2Y40    CONTROLLER_INST/FSM_onehot_STATE_reg[6]_lopt_replica/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.400         50.000      49.600     SLICE_X2Y40    CONTROLLER_INST/FSM_onehot_STATE_reg[6]_lopt_replica/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         50.000      49.650     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[0]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.350         50.000      49.650     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[0]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         50.000      49.650     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[10]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.350         50.000      49.650     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[10]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         50.000      49.650     SLICE_X5Y39    CONTROLLER_INST/FSM_onehot_STATE_reg[11]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.350         50.000      49.650     SLICE_X5Y39    CONTROLLER_INST/FSM_onehot_STATE_reg[11]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         50.000      49.650     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[12]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.350         50.000      49.650     SLICE_X3Y37    CONTROLLER_INST/FSM_onehot_STATE_reg[12]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         50.000      49.650     SLICE_X5Y39    CONTROLLER_INST/FSM_onehot_STATE_reg[13]/C
+High Pulse Width  Fast    FDCE/C              n/a            0.350         50.000      49.650     SLICE_X5Y39    CONTROLLER_INST/FSM_onehot_STATE_reg[13]/C
+
+
+

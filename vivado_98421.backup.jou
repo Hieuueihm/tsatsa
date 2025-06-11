@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jun 11 21:16:27 2025
+# Process ID: 98421
+# Current directory: /home/hieu/workspace/vhdl_pj_end
+# Command line: vivado
+# Log file: /home/hieu/workspace/vhdl_pj_end/vivado.log
+# Journal file: /home/hieu/workspace/vhdl_pj_end/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/hieu/workspace/vhdl_pj_end/project_3/project_3.xpr
+update_compile_order -fileset sources_1
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_simulation -mode post-implementation -type timing

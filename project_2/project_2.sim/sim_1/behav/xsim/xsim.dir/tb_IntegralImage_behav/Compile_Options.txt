@@ -1,0 +1,1 @@
+-wto "12a6a6522fd24cd5bac9fb14870d0a18" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "tb_IntegralImage_behav" "xil_defaultlib.tb_IntegralImage" -log "elaborate.log" 

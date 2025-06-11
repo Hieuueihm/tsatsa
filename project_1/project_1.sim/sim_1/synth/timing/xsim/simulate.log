@@ -1,0 +1,175 @@
+Time resolution is 1 ps
+WARNING: "/wrk/ci/prod/2021.1/rdi_builds/continuous/2021_06_10_3247384/data/verilog/src/unisims/RAMB18E1.v" Line 983: Timing violation in scope /tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory_reg/TChk983_5765 at time 52116 ps $setuphold (posedge CLKARDCLK,posedge ENARDEN,(0:0:0),(0:0:0),notifier_a,clkardclk_en_p,clkardclk_en_p,CLKARDCLK_delay,ENARDEN_delay) 
+WARNING: "/wrk/ci/prod/2021.1/rdi_builds/continuous/2021_06_10_3247384/data/verilog/src/unisims/RAMB18E1.v" Line 984: Timing violation in scope /tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory_reg/TChk984_5766 at time 552116 ps $setuphold (posedge CLKARDCLK,negedge ENARDEN,(0:0:0),(0:0:0),notifier_a,clkardclk_en_p,clkardclk_en_p,CLKARDCLK_delay,ENARDEN_delay) 
+WARNING: "/wrk/ci/prod/2021.1/rdi_builds/continuous/2021_06_10_3247384/data/verilog/src/unisims/RAMB18E1.v" Line 983: Timing violation in scope /tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory_reg/TChk983_5765 at time 52116 ps $setuphold (posedge CLKARDCLK,posedge ENARDEN,(0:0:0),(0:0:0),notifier_a,clkardclk_en_p,clkardclk_en_p,CLKARDCLK_delay,ENARDEN_delay) 
+WARNING: "/wrk/ci/prod/2021.1/rdi_builds/continuous/2021_06_10_3247384/data/verilog/src/unisims/RAMB18E1.v" Line 984: Timing violation in scope /tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory_reg/TChk984_5766 at time 552116 ps $setuphold (posedge CLKARDCLK,negedge ENARDEN,(0:0:0),(0:0:0),notifier_a,clkardclk_en_p,clkardclk_en_p,CLKARDCLK_delay,ENARDEN_delay) 
+Note: Xử lý hoàn tất
+Time: 6453001 ps  Iteration: 1  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 100
+Time: 7473001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(0,0) = -2147483648
+Time: 7473001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 101
+Time: 7493001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(0,1) = 162
+Time: 7493001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 102
+Time: 7513001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(0,2) = 0
+Time: 7513001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 103
+Time: 7533001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(0,3) = 0
+Time: 7533001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 104
+Time: 7553001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(0,4) = 0
+Time: 7553001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 105
+Time: 7573001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(0,5) = 0
+Time: 7573001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 106
+Time: 7593001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(0,6) = 0
+Time: 7593001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 106
+Time: 7613001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(1,0) = 0
+Time: 7613001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 107
+Time: 7633001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(1,1) = 0
+Time: 7633001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 108
+Time: 7653001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(1,2) = 0
+Time: 7653001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 109
+Time: 7673001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(1,3) = 0
+Time: 7673001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 110
+Time: 7693001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(1,4) = 0
+Time: 7693001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 111
+Time: 7713001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(1,5) = 0
+Time: 7713001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 112
+Time: 7733001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(1,6) = 8
+Time: 7733001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 112
+Time: 7753001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(2,0) = 23
+Time: 7753001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 113
+Time: 7773001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(2,1) = 0
+Time: 7773001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 114
+Time: 7793001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(2,2) = 0
+Time: 7793001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 115
+Time: 7813001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(2,3) = 23
+Time: 7813001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 116
+Time: 7833001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(2,4) = 28
+Time: 7833001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 117
+Time: 7853001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(2,5) = 35
+Time: 7853001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 118
+Time: 7873001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(2,6) = 57
+Time: 7873001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 118
+Time: 7893001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(3,0) = 88
+Time: 7893001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 119
+Time: 7913001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(3,1) = 0
+Time: 7913001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 120
+Time: 7933001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(3,2) = 0
+Time: 7933001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 121
+Time: 7953001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(3,3) = 27
+Time: 7953001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 122
+Time: 7973001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(3,4) = 38
+Time: 7973001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 123
+Time: 7993001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(3,5) = 58
+Time: 7993001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 124
+Time: 8013001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(3,6) = 100
+Time: 8013001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 124
+Time: 8033001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(4,0) = 153
+Time: 8033001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 125
+Time: 8053001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(4,1) = 0
+Time: 8053001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 126
+Time: 8073001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(4,2) = 0
+Time: 8073001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 127
+Time: 8093001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(4,3) = 37
+Time: 8093001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 128
+Time: 8113001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(4,4) = 60
+Time: 8113001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 129
+Time: 8133001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(4,5) = 99
+Time: 8133001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 130
+Time: 8153001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(4,6) = 162
+Time: 8153001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 130
+Time: 8173001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(5,0) = 218
+Time: 8173001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 131
+Time: 8193001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(5,1) = 0
+Time: 8193001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 132
+Time: 8213001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(5,2) = 0
+Time: 8213001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 133
+Time: 8233001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(5,3) = 48
+Time: 8233001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 134
+Time: 8253001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(5,4) = 89
+Time: 8253001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 135
+Time: 8273001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(5,5) = 153
+Time: 8273001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: mem_addr = 136
+Time: 8293001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd
+Note: J(5,6) = 218
+Time: 8293001 ps  Iteration: 0  Process: /tb_IntegralImage/stim_proc  File: /home/hieu/workspace/vhdl_pj_end/tb.vhd

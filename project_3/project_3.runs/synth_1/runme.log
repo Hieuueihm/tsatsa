@@ -1,0 +1,327 @@
+
+*** Running vivado
+    with args -log IntegralImage.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source IntegralImage.tcl
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source IntegralImage.tcl -notrace
+Command: synth_design -top IntegralImage -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 94251
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2784.160 ; gain = 57.688 ; free physical = 94 ; free virtual = 3442
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'IntegralImage' [/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd:40]
+INFO: [Synth 8-638] synthesizing module 'Datapath' [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:49]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Memory' declared at '/home/hieu/workspace/vhdl_pj_end/Memory.vhd:5' bound to instance 'Memory_ins' of component 'Memory' [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'Memory' [/home/hieu/workspace/vhdl_pj_end/Memory.vhd:19]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Memory' (1#1) [/home/hieu/workspace/vhdl_pj_end/Memory.vhd:19]
+INFO: [Synth 8-3491] module 'Counter' declared at '/home/hieu/workspace/vhdl_pj_end/Counter.vhd:5' bound to instance 'COUNTER_I' of component 'Counter' [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'Counter' [/home/hieu/workspace/vhdl_pj_end/Counter.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'Counter' (2#1) [/home/hieu/workspace/vhdl_pj_end/Counter.vhd:15]
+INFO: [Synth 8-3491] module 'Counter' declared at '/home/hieu/workspace/vhdl_pj_end/Counter.vhd:5' bound to instance 'COUNTER_J' of component 'Counter' [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:98]
+INFO: [Synth 8-226] default block is never used [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:129]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Regn' declared at '/home/hieu/workspace/vhdl_pj_end/Regn.vhd:5' bound to instance 'REGA' of component 'Regn' [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'Regn' [/home/hieu/workspace/vhdl_pj_end/Regn.vhd:14]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Regn' (3#1) [/home/hieu/workspace/vhdl_pj_end/Regn.vhd:14]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Regn' declared at '/home/hieu/workspace/vhdl_pj_end/Regn.vhd:5' bound to instance 'REGB' of component 'Regn' [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:172]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Regn' declared at '/home/hieu/workspace/vhdl_pj_end/Regn.vhd:5' bound to instance 'REGC' of component 'Regn' [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:182]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Regn' declared at '/home/hieu/workspace/vhdl_pj_end/Regn.vhd:5' bound to instance 'REGD' of component 'Regn' [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:193]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'Compute' declared at '/home/hieu/workspace/vhdl_pj_end/Compute.vhd:5' bound to instance 'Cmpute' of component 'Compute' [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'Compute' [/home/hieu/workspace/vhdl_pj_end/Compute.vhd:21]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Compute' (4#1) [/home/hieu/workspace/vhdl_pj_end/Compute.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'Datapath' (5#1) [/home/hieu/workspace/vhdl_pj_end/Datapath.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'Controller' [/home/hieu/workspace/vhdl_pj_end/Controller.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'Controller' (6#1) [/home/hieu/workspace/vhdl_pj_end/Controller.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'IntegralImage' (7#1) [/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd:40]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2823.129 ; gain = 96.656 ; free physical = 103 ; free virtual = 2969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2840.941 ; gain = 114.469 ; free physical = 80 ; free virtual = 2914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2840.941 ; gain = 114.469 ; free physical = 80 ; free virtual = 2914
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2840.941 ; gain = 0.000 ; free physical = 83 ; free virtual = 2899
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/hieu/workspace/vhdl_pj_end/project_3/project_3.srcs/constrs_1/new/c.xdc]
+Finished Parsing XDC File [/home/hieu/workspace/vhdl_pj_end/project_3/project_3.srcs/constrs_1/new/c.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3023.566 ; gain = 0.000 ; free physical = 807 ; free virtual = 3397
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3023.566 ; gain = 0.000 ; free physical = 806 ; free virtual = 3397
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3023.566 ; gain = 297.094 ; free physical = 875 ; free virtual = 3473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3023.566 ; gain = 297.094 ; free physical = 874 ; free virtual = 3473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 3023.566 ; gain = 297.094 ; free physical = 874 ; free virtual = 3474
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'STATE_reg' in module 'Controller'
+INFO: [Synth 8-6904] The RAM "Memory:/memory_reg" of size (depth=201 x width=16) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |             00000000000000100000 |                            00000
+                      s1 |             00000010000000000000 |                            00001
+                      s2 |             00000000100000000000 |                            00010
+                      s3 |             00000000000010000000 |                            00011
+                      s4 |             00000000000100000000 |                            00100
+                      s5 |             10000000000000000000 |                            00101
+                      s6 |             00000000010000000000 |                            00110
+                      s7 |             00010000000000000000 |                            00111
+                      s8 |             00100000000000000000 |                            01000
+                      s9 |             01000000000000000000 |                            01001
+                     s10 |             00001000000000000000 |                            01010
+                     s11 |             00000100000000000000 |                            01011
+                     s12 |             00000000000000001000 |                            01100
+                     s13 |             00000000000000000100 |                            01101
+                     s14 |             00000000000000000001 |                            01110
+                     s15 |             00000000000000000010 |                            01111
+                     s16 |             00000001000000000000 |                            10000
+                     s17 |             00000000001000000000 |                            10001
+                     s18 |             00000000000001000000 |                            10010
+                     s19 |             00000000000000010000 |                            10011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'STATE_reg' using encoding 'one-hot' in module 'Controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 3023.566 ; gain = 297.094 ; free physical = 861 ; free virtual = 3467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input   16 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 5     
+	   2 Input    9 Bit       Adders := 5     
++---Registers : 
+	               16 Bit    Registers := 6     
+	                9 Bit    Registers := 2     
++---RAMs : 
+	               3K Bit	(201 X 16 bit)          RAMs := 1     
++---Muxes : 
+	  20 Input   20 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 7     
+	   2 Input   16 Bit        Muxes := 6     
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6904] The RAM "DATAPATH_INST/Memory_ins/memory_reg" of size (depth=201 x width=16) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "IntegralImage/DATAPATH_INST/Memory_ins/memory_reg" of size (depth=201 x width=16) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 3023.566 ; gain = 297.094 ; free physical = 832 ; free virtual = 3449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++--------------+-------------------------------------+-----------+----------------------+---------------------------------------------+
+|Module Name   | RTL Object                          | Inference | Size (Depth x Width) | Primitives                                  | 
++--------------+-------------------------------------+-----------+----------------------+---------------------------------------------+
+|IntegralImage | DATAPATH_INST/Memory_ins/memory_reg | Implied   | 256 x 16             | RAM16X1S x 16 RAM64X1S x 16 RAM128X1S x 16  | 
++--------------+-------------------------------------+-----------+----------------------+---------------------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 3411.176 ; gain = 684.703 ; free physical = 185 ; free virtual = 2866
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 3477.785 ; gain = 751.312 ; free physical = 144 ; free virtual = 2826
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++--------------+-------------------------------------+-----------+----------------------+---------------------------------------------+
+|Module Name   | RTL Object                          | Inference | Size (Depth x Width) | Primitives                                  | 
++--------------+-------------------------------------+-----------+----------------------+---------------------------------------------+
+|IntegralImage | DATAPATH_INST/Memory_ins/memory_reg | Implied   | 256 x 16             | RAM16X1S x 16 RAM64X1S x 16 RAM128X1S x 16  | 
++--------------+-------------------------------------+-----------+----------------------+---------------------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 3485.793 ; gain = 759.320 ; free physical = 147 ; free virtual = 2828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:38 . Memory (MB): peak = 3485.793 ; gain = 759.320 ; free physical = 147 ; free virtual = 2828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:38 . Memory (MB): peak = 3485.793 ; gain = 759.320 ; free physical = 147 ; free virtual = 2828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 3485.793 ; gain = 759.320 ; free physical = 147 ; free virtual = 2828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 3485.793 ; gain = 759.320 ; free physical = 147 ; free virtual = 2829
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 3485.793 ; gain = 759.320 ; free physical = 147 ; free virtual = 2829
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 3485.793 ; gain = 759.320 ; free physical = 147 ; free virtual = 2829
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY8    |    11|
+|3     |LUT2      |    41|
+|4     |LUT3      |    53|
+|5     |LUT4      |    43|
+|6     |LUT5      |    85|
+|7     |LUT6      |   194|
+|8     |MUXF7     |     2|
+|9     |RAM128X1S |    16|
+|10    |RAM16X1S  |    16|
+|11    |RAM64X1S  |    16|
+|12    |FDCE      |   117|
+|13    |FDPE      |     1|
+|14    |FDRE      |    16|
+|15    |IBUF      |    55|
+|16    |OBUF      |    18|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 3485.793 ; gain = 759.320 ; free physical = 147 ; free virtual = 2829
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 3485.793 ; gain = 576.695 ; free physical = 185 ; free virtual = 2868
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 3485.801 ; gain = 759.320 ; free physical = 185 ; free virtual = 2868
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3485.801 ; gain = 0.000 ; free physical = 173 ; free virtual = 2861
+INFO: [Netlist 29-17] Analyzing 117 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3538.621 ; gain = 0.000 ; free physical = 88 ; free virtual = 2796
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 104 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 55 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 16 instances
+  RAM16X1S => RAM32X1S (RAMS32): 16 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 16 instances
+
+Synth Design complete, checksum: 5fafe91c
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:48 . Memory (MB): peak = 3538.621 ; gain = 1115.562 ; free physical = 251 ; free virtual = 2962
+INFO: [Common 17-1381] The checkpoint '/home/hieu/workspace/vhdl_pj_end/project_3/project_3.runs/synth_1/IntegralImage.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file IntegralImage_utilization_synth.rpt -pb IntegralImage_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 11 21:08:40 2025...

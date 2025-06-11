@@ -9,8 +9,10 @@ ARCHITECTURE behavior OF tb_IntegralImage IS
 
     CONSTANT DATA_WIDTH : INTEGER := 8;
     CONSTANT ADDR_WIDTH : INTEGER := 16;
+
     CONSTANT IMG_W : INTEGER := 5;
     CONSTANT IMG_H : INTEGER := 5;
+
     CONSTANT BASE_INPUT : INTEGER := 0;
     CONSTANT BASE_OUTPUT : INTEGER := 100;
 
@@ -27,12 +29,12 @@ ARCHITECTURE behavior OF tb_IntegralImage IS
     SIGNAL IMAGE_WIDTH : STD_LOGIC_VECTOR(8 DOWNTO 0);
     SIGNAL IMAGE_HEIGHT : STD_LOGIC_VECTOR(8 DOWNTO 0);
     SIGNAL size_error_o : STD_LOGIC;
-    SIGNAL out_value : INTEGER;
+    CONSTANT CLK_PERIOD : TIME := 20 ns;
+    SIGNAL output_captured : STD_LOGIC_VECTOR(2 * DATA_WIDTH - 1 DOWNTO 0);
+    SIGNAL output_valid_d : STD_LOGIC;
+    SIGNAL output_valid : STD_LOGIC;
 
     COMPONENT IntegralImage
-        GENERIC (
-            DATA_WIDTH : INTEGER;
-            ADDR_WIDTH : INTEGER);
         PORT (
             clk, rst : IN STD_LOGIC;
             Start : IN STD_LOGIC;
@@ -47,15 +49,9 @@ ARCHITECTURE behavior OF tb_IntegralImage IS
             IMAGE_HEIGHT : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
             size_error_o : OUT STD_LOGIC);
     END COMPONENT;
-
-    TYPE ram_type IS ARRAY (0 TO 255) OF STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL RAM : ram_type;
-
 BEGIN
     uut : IntegralImage
-    GENERIC MAP(
-        DATA_WIDTH => DATA_WIDTH,
-        ADDR_WIDTH => ADDR_WIDTH)
+
     PORT MAP(
         clk => clk,
         rst => rst,
@@ -76,15 +72,35 @@ BEGIN
     -- Clock process
     clk_process : PROCESS
     BEGIN
-        WHILE NOW < 2 ms LOOP
+        WHILE true LOOP
             clk <= '0';
-            WAIT FOR 10 ns;
+            WAIT FOR CLK_PERIOD / 2;
             clk <= '1';
-            WAIT FOR 10 ns;
+            WAIT FOR CLK_PERIOD / 2;
         END LOOP;
-        WAIT;
     END PROCESS;
 
+    PROCESS (clk, rst)
+    BEGIN
+        IF rst = '1' THEN
+            output_valid_d <= '0';
+            output_valid <= '0';
+
+        ELSIF rising_edge(clk) THEN
+            output_valid_d <= RE;
+            output_valid <= output_valid_d;
+
+        END IF;
+    END PROCESS;
+
+    PROCESS (clk, rst)
+    BEGIN
+        IF rst = '1' THEN
+            output_captured <= (OTHERS => '0');
+        ELSIF rising_edge(clk) THEN
+            output_captured <= Data_out;
+        END IF;
+    END PROCESS;
     -- Stimulus process
     stim_proc : PROCESS
         TYPE matrix_t IS ARRAY (0 TO 24) OF INTEGER;
@@ -96,7 +112,7 @@ BEGIN
             20 => 11, 21 => 18, 22 => 25, 23 => 2, 24 => 9
         );
     BEGIN
-        WAIT FOR 50 ns;
+        WAIT FOR 100 ns;
         rst <= '0';
         IMAGE_WIDTH <= STD_LOGIC_VECTOR(to_unsigned(IMG_W, 9));
         IMAGE_HEIGHT <= STD_LOGIC_VECTOR(to_unsigned(IMG_H, 9));
@@ -105,42 +121,37 @@ BEGIN
 
         -- Ghi dữ liệu vào RAM từng ô qua mem_addr
         FOR i IN 0 TO 24 LOOP
+            WAIT UNTIL rising_edge(clk);
             mem_addr <= STD_LOGIC_VECTOR(to_unsigned(BASE_INPUT + i, ADDR_WIDTH));
             Data_in <= STD_LOGIC_VECTOR(to_unsigned(input_matrix(i), DATA_WIDTH));
             WE <= '1';
-            WAIT FOR 20 ns;
         END LOOP;
-        WE <= '0';
-        WAIT FOR 20 ns;
+        WAIT UNTIL rising_edge(clk);
 
+        WE <= '0';
         -- Bắt đầu xử lý
+        WAIT UNTIL rising_edge(clk);
         Start <= '1';
-        WAIT FOR 20 ns;
 
         -- Chờ hoàn tất
+        WAIT UNTIL rising_edge(clk);
         WAIT UNTIL Done = '1';
         START <= '0';
-
+        WAIT UNTIL rising_edge(clk);
+        WAIT UNTIL rising_edge(clk);
         REPORT "Xử lý hoàn tất";
-        WAIT FOR 1000 ns;
         FOR i IN 0 TO IMG_H LOOP
-            FOR j IN 0 TO IMG_W + 1 LOOP
-                mem_addr <= STD_LOGIC_VECTOR(
-                    to_unsigned(BASE_OUTPUT + i * (IMG_W + 1) + j, ADDR_WIDTH)
-                    );
+            FOR j IN 0 TO IMG_W LOOP
+                mem_addr <= STD_LOGIC_VECTOR(to_unsigned(BASE_OUTPUT + i * (IMG_W + 1) + j, ADDR_WIDTH));
+                WAIT UNTIL rising_edge(clk);
                 RE <= '1';
 
-                WAIT FOR 20 ns;
-                out_value <= to_integer(unsigned(Data_out));
-                REPORT "mem_addr = " & INTEGER'image(to_integer(unsigned(mem_addr)));
-                REPORT "J(" & INTEGER'image(i) & "," & INTEGER'image(j) & ") = " & INTEGER'image(out_value);
             END LOOP;
         END LOOP;
         RE <= '0';
+        WAIT FOR 100 ns;
 
-        WAIT FOR 20 ns;
-
-        WAIT;
+        WAIT; -- Kết thúc mô phỏng
     END PROCESS;
 
 END ARCHITECTURE;

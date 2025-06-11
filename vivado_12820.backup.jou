@@ -1,0 +1,570 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jun 11 14:50:23 2025
+# Process ID: 12820
+# Current directory: /home/hieu/workspace/vhdl_pj_end
+# Command line: vivado
+# Log file: /home/hieu/workspace/vhdl_pj_end/vivado.log
+# Journal file: /home/hieu/workspace/vhdl_pj_end/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/hieu/workspace/vhdl_pj_end/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_IntegralImage.tcl
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST}} 
+restart
+run all
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[65535]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[5]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[4]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[3]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[2]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[1]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[0]}} 
+restart
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/Din}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_init}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/init_sel}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/I}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/W}} 
+restart
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/base_output_addr}} 
+restart
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Isub}} 
+restart
+run all
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_IntegralImage.tcl
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_init}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST/STATE}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_init}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_store1}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_store}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_store_sel}} 
+restart
+run all
+current_wave_config {Untitled 2}
+log_wave {/tb_IntegralImage/uut/DATAPATH_INST/addr_store_sel} {/tb_IntegralImage/uut/DATAPATH_INST/addr_A} {/tb_IntegralImage/uut/DATAPATH_INST/addr_B} {/tb_IntegralImage/uut/DATAPATH_INST/addr_C} {/tb_IntegralImage/uut/DATAPATH_INST/addr_D} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_store_sel}} {{/tb_IntegralImage/uut/DATAPATH_INST/addr_A}} {{/tb_IntegralImage/uut/DATAPATH_INST/addr_B}} {{/tb_IntegralImage/uut/DATAPATH_INST/addr_C}} {{/tb_IntegralImage/uut/DATAPATH_INST/addr_D}} 
+restart
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Wadd}} 
+restart
+run all
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/I}} {{/tb_IntegralImage/uut/DATAPATH_INST/J}} {{/tb_IntegralImage/uut/DATAPATH_INST/Isub}} {{/tb_IntegralImage/uut/DATAPATH_INST/Jsub}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/I}} {{/tb_IntegralImage/uut/DATAPATH_INST/J}} {{/tb_IntegralImage/uut/DATAPATH_INST/Isub}} {{/tb_IntegralImage/uut/DATAPATH_INST/Jsub}} {{/tb_IntegralImage/uut/DATAPATH_INST/A}} {{/tb_IntegralImage/uut/DATAPATH_INST/B}} {{/tb_IntegralImage/uut/DATAPATH_INST/D}} 
+restart
+run all
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/C}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Data_store}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory}} 
+restart
+run all
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+run all
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/Data_out}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/RE}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/WE}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/Dout}} 
+restart
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+close_sim
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+file mkdir /home/hieu/workspace/vhdl_pj_end/project_1/project_1.srcs/constrs_1
+file mkdir /home/hieu/workspace/vhdl_pj_end/project_1/project_1.srcs/constrs_1/new
+close [ open /home/hieu/workspace/vhdl_pj_end/project_1/project_1.srcs/constrs_1/new/constraint.xdc w ]
+add_files -fileset constrs_1 /home/hieu/workspace/vhdl_pj_end/project_1/project_1.srcs/constrs_1/new/constraint.xdc
+set_property target_constrs_file /home/hieu/workspace/vhdl_pj_end/project_1/project_1.srcs/constrs_1/new/constraint.xdc [current_fileset -constrset]
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_simulation -mode post-implementation -type timing
+launch_simulation -mode post-implementation -type timing
+launch_simulation -mode post-implementation -type functional
+launch_simulation
+source tb_IntegralImage.tcl
+restart
+run all
+close_sim
+launch_simulation
+source tb_IntegralImage.tcl
+restart
+run all
+current_wave_config {Untitled 4}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/COUNTER_I}} 
+current_wave_config {Untitled 4}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/COUNTER_J}} 
+restart
+run all
+restart
+run all
+relaunch_sim
+restart
+run all
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+refresh_design
+launch_simulation -mode post-implementation -type timing
+close_sim
+launch_simulation -mode post-implementation -type timing
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+launch_simulation -mode post-synthesis -type timing
+source tb_IntegralImage.tcl
+run all
+current_design impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+current_sim simulation_5
+close_sim
+save_constraints
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+launch_simulation -mode post-implementation -type functional
+source tb_IntegralImage.tcl
+restart
+run all
+current_wave_config {Untitled 8}
+add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST}} 
+restart
+run all
+current_wave_config {Untitled 8}
+add_wave {{/tb_IntegralImage/Start}} 
+current_sim simulation_7
+close_sim
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+current_design synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+current_sim simulation_6
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+close_sim
+launch_simulation -mode post-synthesis -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+close_sim
+current_sim simulation_9
+close_sim
+close_sim
+close_project
+create_project project_2 /home/hieu/workspace/vhdl_pj_end/project_2 -part xczu7ev-ffvc1156-2-e
+set_property board_part xilinx.com:zcu106:part0:2.6 [current_project]
+add_files -norecurse {/home/hieu/workspace/vhdl_pj_end/Regn.vhd /home/hieu/workspace/vhdl_pj_end/Compute.vhd /home/hieu/workspace/vhdl_pj_end/Datapath.vhd /home/hieu/workspace/vhdl_pj_end/MyLib.vhd /home/hieu/workspace/vhdl_pj_end/Controller.vhd /home/hieu/workspace/vhdl_pj_end/Counter.vhd {/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd} /home/hieu/workspace/vhdl_pj_end/Memory.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/hieu/workspace/vhdl_pj_end/tb.vhd
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property simulator_language VHDL [current_project]
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+file mkdir /home/hieu/workspace/vhdl_pj_end/project_2/project_2.srcs/constrs_1
+file mkdir /home/hieu/workspace/vhdl_pj_end/project_2/project_2.srcs/constrs_1/new
+close [ open /home/hieu/workspace/vhdl_pj_end/project_2/project_2.srcs/constrs_1/new/cos.xdc w ]
+add_files -fileset constrs_1 /home/hieu/workspace/vhdl_pj_end/project_2/project_2.srcs/constrs_1/new/cos.xdc
+set_property target_constrs_file /home/hieu/workspace/vhdl_pj_end/project_2/project_2.srcs/constrs_1/new/cos.xdc [current_fileset -constrset]
+launch_simulation
+source tb_IntegralImage.tcl
+restart
+run all
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+run all
+current_wave_config {Untitled 12}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins}} 
+restart
+run all
+current_wave_config {Untitled 12}
+log_wave {/tb_IntegralImage/uut/CONTROLLER_INST/STATE} 
+current_wave_config {Untitled 12}
+add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST/STATE}} 
+restart
+run all
+relaunch_sim
+run all
+relaunch_sim
+restart
+run all
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_simulation -mode post-synthesis -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+close_design
+open_run impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+close_sim
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+current_sim simulation_12
+close_sim
+launch_simulation
+source tb_IntegralImage.tcl
+restart
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 16}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/RE_D}} 
+current_wave_config {Untitled 16}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/D_out}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+close_sim
+current_sim simulation_15
+close_sim
+close_sim
+launch_simulation
+source tb_IntegralImage.tcl
+restart
+run all
+current_wave_config {Untitled 17}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins}} 
+restart
+run all
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+run all
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+relaunch_sim
+restart
+run all
+current_sim simulation_17
+close_sim
+launch_simulation
+source tb_IntegralImage.tcl
+restart
+run all
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+current_design synth_1
+close_design
+launch_simulation -mode post-synthesis -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+relaunch_sim
+run all
+current_sim simulation_18
+close_sim
+current_design impl_1
+close_design
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+current_sim simulation_19
+restart
+run all
+current_sim simulation_21
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+current_sim simulation_19
+close_sim
+launch_simulation
+source tb_IntegralImage.tcl
+restart
+run all
+current_wave_config {Untitled 22}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory}} 
+restart
+run all
+close_sim
+launch_simulation
+source tb_IntegralImage.tcl
+run all
+relaunch_sim
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run all
+current_wave_config {Untitled 23}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 23}
+add_wave {{/tb_IntegralImage/clk}} {{/tb_IntegralImage/rst}} {{/tb_IntegralImage/Start}} {{/tb_IntegralImage/Done}} {{/tb_IntegralImage/base_input_addr}} {{/tb_IntegralImage/base_output_addr}} {{/tb_IntegralImage/mem_addr}} {{/tb_IntegralImage/Data_in}} {{/tb_IntegralImage/Data_out}} {{/tb_IntegralImage/WE}} {{/tb_IntegralImage/RE}} {{/tb_IntegralImage/IMAGE_WIDTH}} {{/tb_IntegralImage/IMAGE_HEIGHT}} {{/tb_IntegralImage/size_error_o}} {{/tb_IntegralImage/output_captured}} {{/tb_IntegralImage/DATA_WIDTH}} {{/tb_IntegralImage/ADDR_WIDTH}} {{/tb_IntegralImage/IMG_W}} {{/tb_IntegralImage/IMG_H}} {{/tb_IntegralImage/BASE_INPUT}} {{/tb_IntegralImage/BASE_OUTPUT}} {{/tb_IntegralImage/CLK_PERIOD}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+current_sim simulation_21
+close_sim
+close_design
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+relaunch_sim
+restart
+run all
+close_sim
+current_sim simulation_23
+close_sim
+close_sim

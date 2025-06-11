@@ -54,8 +54,8 @@ ARCHITECTURE rtl OF Datapath IS
     SIGNAL D_out : STD_LOGIC_VECTOR(2 * DATA_WIDTH - 1 DOWNTO 0);
     SIGNAL Addr_in_m : STD_LOGIC_VECTOR(ADDR_WIDTH - 1 DOWNTO 0);
     SIGNAL addr_calc : STD_LOGIC_VECTOR(ADDR_WIDTH - 1 DOWNTO 0);
-    SIGNAL I, J : STD_LOGIC_VECTOR(ADDR_WIDTH - 1 DOWNTO 0);
-    SIGNAL Isub, Jsub : STD_LOGIC_VECTOR(ADDR_WIDTH - 1 DOWNTO 0);
+    SIGNAL I, J : STD_LOGIC_VECTOR(8 DOWNTO 0);
+    SIGNAL Isub, Jsub : STD_LOGIC_VECTOR(8 DOWNTO 0);
     SIGNAL addr_A, addr_B, addr_C, addr_D, addr_store : STD_LOGIC_VECTOR(ADDR_WIDTH - 1 DOWNTO 0);
     SIGNAL H, W, Wadd : STD_LOGIC_VECTOR(8 DOWNTO 0);
     SIGNAL addr_reg : STD_LOGIC_VECTOR(ADDR_WIDTH - 1 DOWNTO 0);
@@ -87,22 +87,20 @@ BEGIN
         Dout => D_out
     );
     COUNTER_I : Counter
-    GENERIC MAP(ADDR_WIDTH => ADDR_WIDTH)
     PORT MAP(
         RST, CLK,
         En => En_i,
         LDI => LDI_i,
-        D => STD_LOGIC_VECTOR(to_unsigned(1, ADDR_WIDTH)),
+        D => STD_LOGIC_VECTOR(to_unsigned(1, 9)),
         Q => I
     );
 
     COUNTER_J : Counter
-    GENERIC MAP(ADDR_WIDTH => ADDR_WIDTH)
     PORT MAP(
         RST, CLK,
         En => En_j,
         LDI => LDI_j,
-        D => STD_LOGIC_VECTOR(to_unsigned(1, ADDR_WIDTH)),
+        D => STD_LOGIC_VECTOR(to_unsigned(1, 9)),
         Q => J
     );
     Jsub <= STD_LOGIC_VECTOR(unsigned(J) - to_unsigned(1, J'length));

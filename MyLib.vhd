@@ -27,13 +27,12 @@ PACKAGE MyLib IS
     END COMPONENT;
 
     COMPONENT Counter IS
-        GENERIC (ADDR_WIDTH : INTEGER);
         PORT (
-            RST, CLK : IN STD_LOGIC;
-            En : IN STD_LOGIC;
-            LDI : IN STD_LOGIC;
-            D : IN STD_LOGIC_VECTOR(ADDR_WIDTH - 1 DOWNTO 0); -- Data input for loading
-            Q : OUT STD_LOGIC_VECTOR(ADDR_WIDTH - 1 DOWNTO 0) -- Counter output
+        RST, CLK : IN STD_LOGIC;
+        En : IN STD_LOGIC;
+        LDI : IN STD_LOGIC;
+        D : IN STD_LOGIC_VECTOR(8 DOWNTO 0); -- Data input for loading
+        Q : OUT STD_LOGIC_VECTOR(8 DOWNTO 0) -- Counter output
         );
     END COMPONENT;
 

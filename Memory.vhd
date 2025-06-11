@@ -25,11 +25,13 @@ BEGIN
         IF rising_edge(CLK) THEN
             IF WE = '1' THEN
                 memory(TO_INTEGER(UNSIGNED(ADDR))) <= Din;
-            END IF;
-            IF RE = '1' THEN
+            ELSIF RE = '1' THEN
                 Dout <= memory(TO_INTEGER(UNSIGNED(ADDR)));
+            ELSE
+                Dout <= (OTHERS => '0');
             END IF;
         END IF;
+
     END PROCESS;
 
 END ARCHITECTURE rtl;

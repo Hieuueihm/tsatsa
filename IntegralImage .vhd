@@ -4,8 +4,8 @@ USE IEEE.NUMERIC_STD.ALL;
 USE work.MyLib.ALL;
 ENTITY IntegralImage IS
     GENERIC (
-        DATA_WIDTH : INTEGER;
-        ADDR_WIDTH : INTEGER);
+        DATA_WIDTH : INTEGER := 8;
+        ADDR_WIDTH : INTEGER := 16);
 
     PORT (
         clk : IN STD_LOGIC;

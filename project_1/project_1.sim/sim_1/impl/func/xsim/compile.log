@@ -1,0 +1,15 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hieu/workspace/vhdl_pj_end/project_1/project_1.sim/sim_1/impl/func/xsim/tb_IntegralImage_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Compute
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-311] analyzing module Counter
+INFO: [VRFC 10-311] analyzing module Counter_0
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module IntegralImage
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-311] analyzing module Regn
+INFO: [VRFC 10-311] analyzing module Regn_1
+INFO: [VRFC 10-311] analyzing module Regn_2
+INFO: [VRFC 10-311] analyzing module Regn_3
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/hieu/workspace/vhdl_pj_end/tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_IntegralImage'

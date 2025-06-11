@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jun 11 19:54:06 2025
+# Process ID: 82748
+# Current directory: /home/hieu/workspace/vhdl_pj_end
+# Command line: vivado
+# Log file: /home/hieu/workspace/vhdl_pj_end/vivado.log
+# Journal file: /home/hieu/workspace/vhdl_pj_end/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/hieu/workspace/vhdl_pj_end/project_2/project_2.xpr
+update_compile_order -fileset sources_1
+close_project
+create_project project_3 /home/hieu/workspace/vhdl_pj_end/project_3 -part xczu7ev-ffvc1156-2-e
+set_property board_part xilinx.com:zcu106:part0:2.6 [current_project]
+add_files -norecurse {/home/hieu/workspace/vhdl_pj_end/Regn.vhd /home/hieu/workspace/vhdl_pj_end/Compute.vhd /home/hieu/workspace/vhdl_pj_end/Datapath.vhd /home/hieu/workspace/vhdl_pj_end/MyLib.vhd /home/hieu/workspace/vhdl_pj_end/Controller.vhd /home/hieu/workspace/vhdl_pj_end/Counter.vhd {/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd} /home/hieu/workspace/vhdl_pj_end/Memory.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+file mkdir /home/hieu/workspace/vhdl_pj_end/project_3/project_3.srcs/constrs_1
+file mkdir /home/hieu/workspace/vhdl_pj_end/project_3/project_3.srcs/constrs_1/new
+close [ open /home/hieu/workspace/vhdl_pj_end/project_3/project_3.srcs/constrs_1/new/c.xdc w ]
+add_files -fileset constrs_1 /home/hieu/workspace/vhdl_pj_end/project_3/project_3.srcs/constrs_1/new/c.xdc
+set_property target_constrs_file /home/hieu/workspace/vhdl_pj_end/project_3/project_3.srcs/constrs_1/new/c.xdc [current_fileset -constrset]
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/hieu/workspace/vhdl_pj_end/tb.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_IntegralImage [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_IntegralImage.tcl
+run all
+launch_simulation -mode post-implementation -type timing
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+run all
+current_sim simulation_1
+close_sim
+launch_simulation
+source tb_IntegralImage.tcl
+restart
+run all
+current_wave_config {Untitled 3}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins}} 
+restart
+run all
+current_wave_config {Untitled 3}
+add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST/STATE}} 
+run all
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+current_wave_config {Untitled 3}
+add_wave {{/tb_IntegralImage/output_valid}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+relaunch_sim
+relaunch_sim
+restart
+run all
+launch_simulation
+source tb_IntegralImage.tcl
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1

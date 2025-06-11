@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jun 11 21:16:27 2025
+# Process ID: 98421
+# Current directory: /home/hieu/workspace/vhdl_pj_end
+# Command line: vivado
+# Log file: /home/hieu/workspace/vhdl_pj_end/vivado.log
+# Journal file: /home/hieu/workspace/vhdl_pj_end/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/hieu/workspace/vhdl_pj_end/project_3/project_3.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/hieu/workspace/vhdl_pj_end/project_3/project_3.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/hieu/tools/Vivado/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 7516.969 ; gain = 84.391 ; free physical = 4734 ; free virtual = 8454
+update_compile_order -fileset sources_1
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to kill process with pid <97575> on the remote host No such file or directory
+
+launch_runs impl_1 -jobs 8
+[Wed Jun 11 21:26:20 2025] Launched impl_1...
+Run output will be captured here: /home/hieu/workspace/vhdl_pj_end/project_3/project_3.runs/impl_1/runme.log
+launch_simulation -mode post-implementation -type timing
+Command: launch_simulation -mode post-implementation -type timing
+INFO: [Vivado 12-12493] Simulation top is 'tb_IntegralImage'
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in '/home/hieu/workspace/vhdl_pj_end/project_3/project_3.sim/sim_1/impl/timing/xsim'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
