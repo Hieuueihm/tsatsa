@@ -51,10 +51,7 @@ ARCHITECTURE behavior OF tb_IntegralImage IS
     TYPE ram_type IS ARRAY (0 TO 255) OF STD_LOGIC_VECTOR(7 DOWNTO 0);
     SIGNAL RAM : ram_type;
 
-    SIGNAL addr_counter : INTEGER := 0;
-
 BEGIN
-
     uut : IntegralImage
     GENERIC MAP(
         DATA_WIDTH => DATA_WIDTH,
@@ -90,8 +87,8 @@ BEGIN
 
     -- Stimulus process
     stim_proc : PROCESS
-        TYPE int_array IS ARRAY (0 TO 24) OF INTEGER;
-        VARIABLE input_matrix : int_array := (
+        TYPE matrix_t IS ARRAY (0 TO 24) OF INTEGER;
+        VARIABLE input_matrix : matrix_t := (
             0 => 17, 1 => 24, 2 => 1, 3 => 8, 4 => 15,
             5 => 23, 6 => 5, 7 => 7, 8 => 14, 9 => 16,
             10 => 4, 11 => 6, 12 => 13, 13 => 20, 14 => 22,
@@ -123,21 +120,25 @@ BEGIN
         -- Chờ hoàn tất
         WAIT UNTIL Done = '1';
         START <= '0';
-        REPORT "Xử lý hoàn tất";
 
+        REPORT "Xử lý hoàn tất";
+        WAIT FOR 1000 ns;
         FOR i IN 0 TO IMG_H LOOP
-            FOR j IN 0 TO IMG_W LOOP
+            FOR j IN 0 TO IMG_W + 1 LOOP
                 mem_addr <= STD_LOGIC_VECTOR(
                     to_unsigned(BASE_OUTPUT + i * (IMG_W + 1) + j, ADDR_WIDTH)
                     );
                 RE <= '1';
-                WAIT FOR 20 ns;
 
+                WAIT FOR 20 ns;
                 out_value <= to_integer(unsigned(Data_out));
+                REPORT "mem_addr = " & INTEGER'image(to_integer(unsigned(mem_addr)));
                 REPORT "J(" & INTEGER'image(i) & "," & INTEGER'image(j) & ") = " & INTEGER'image(out_value);
             END LOOP;
         END LOOP;
         RE <= '0';
+
+        WAIT FOR 20 ns;
 
         WAIT;
     END PROCESS;

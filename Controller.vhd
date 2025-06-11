@@ -7,7 +7,7 @@ ENTITY Controller IS
     PORT (
         RST, CLK : IN STD_LOGIC;
         Start : IN STD_LOGIC;
-        size_err, iMax, jMax : IN STD_LOGIC;
+        size_err, iMax, jMax, iSubMax, jSubMax : IN STD_LOGIC;
         mem_d_sel, Int_RE, Int_WE, En_A, En_B, En_C, En_D, En_i, En_j : OUT STD_LOGIC;
         LDI_i, LDI_j, En_Compute, compute_sel, addr_store_sel, init_sel : OUT STD_LOGIC;
         DONE : OUT STD_LOGIC;
@@ -42,13 +42,13 @@ BEGIN
                         STATE <= S3;
                     END IF;
                 WHEN S3 =>
-                    IF (jMax = '1') THEN
+                    IF (jSubMax = '1') THEN
                         STATE <= S4;
                     ELSE
                         STATE <= S3;
                     END IF;
                 WHEN S4 =>
-                    IF (iMax = '1') THEN
+                    IF (iSubMax = '1') THEN
                         STATE <= S5;
                     ELSE
                         STATE <= S4;
@@ -141,6 +141,6 @@ BEGIN
         '0';
     init_sel <= '1' WHEN STATE = S3 ELSE
         '0';
-    DONE <= '1';
-
+    Done <= '1' WHEN STATE = S18 ELSE
+        '0';
 END ARCHITECTURE;

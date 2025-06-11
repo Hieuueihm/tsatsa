@@ -15,7 +15,6 @@ ENTITY Datapath IS
         rst : IN STD_LOGIC;
 
         Start : IN STD_LOGIC;
-        Done : OUT STD_LOGIC;
 
         -- address bus
         base_input_addr : IN STD_LOGIC_VECTOR(ADDR_WIDTH - 1 DOWNTO 0);
@@ -39,9 +38,10 @@ ENTITY Datapath IS
         -- output error sizes
 
         -- control signals 
-        size_err, iMax, jMax : OUT STD_LOGIC;
+        size_err, iMax, jMax, iSubMax, jSubMax : OUT STD_LOGIC;
         mem_d_sel, Int_RE, Int_WE, En_A, En_B, En_C, En_D, En_i, En_j : IN STD_LOGIC;
         LDI_i, LDI_j, En_Compute, compute_sel, addr_store_sel, init_sel : IN STD_LOGIC;
+
         addr_sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0)
     );
 END ENTITY Datapath;
@@ -113,24 +113,20 @@ BEGIN
     Wadd <= STD_LOGIC_VECTOR(unsigned(W) + to_unsigned(1, W'length));
 
     -- addr_A: base_input_addr + (Isub * W) + Jsub
-    addr_A <= STD_LOGIC_VECTOR(
-        unsigned(base_input_addr) + unsigned(Isub) * unsigned(W) + unsigned(Jsub));
+    addr_A <= STD_LOGIC_VECTOR(resize(
+        unsigned(base_input_addr) + unsigned(Isub) * unsigned(W) + unsigned(Jsub), 16));
 
-    -- addr_B: base_output_addr + (Isub * Wadd) + J
-    addr_B <= STD_LOGIC_VECTOR(
-        unsigned(base_output_addr) + unsigned(Isub) * unsigned(Wadd) + unsigned(J));
+    addr_B <= STD_LOGIC_VECTOR(resize(
+        unsigned(base_output_addr) + unsigned(Isub) * unsigned(Wadd) + unsigned(J), 16));
 
-    -- addr_C: base_output_addr + (I * Wadd) + Jsub
-    addr_C <= STD_LOGIC_VECTOR(
-        unsigned(base_output_addr) + unsigned(I) * unsigned(Wadd) + unsigned(Jsub));
-    -- addr_D: base_output_addr + (Isub * Wadd) + Jsub
-    addr_D <= STD_LOGIC_VECTOR(
-        unsigned(base_output_addr) + unsigned(Isub) * unsigned(Wadd) + unsigned(Jsub));
+    addr_C <= STD_LOGIC_VECTOR(resize(
+        unsigned(base_output_addr) + unsigned(I) * unsigned(Wadd) + unsigned(Jsub), 16));
 
-    -- addr_store: base_output_addr + (I * Wadd) + J
-    addr_store <= STD_LOGIC_VECTOR(
-        unsigned(base_output_addr) + unsigned(I) * unsigned(Wadd) + unsigned(J));
+    addr_D <= STD_LOGIC_VECTOR(resize(
+        unsigned(base_output_addr) + unsigned(Isub) * unsigned(Wadd) + unsigned(Jsub), 16));
 
+    addr_store <= STD_LOGIC_VECTOR(resize(
+        unsigned(base_output_addr) + unsigned(I) * unsigned(Wadd) + unsigned(J), 16));
     WITH addr_sel SELECT
         addr_reg <= addr_A WHEN "00",
         addr_B WHEN "01",
@@ -146,9 +142,10 @@ BEGIN
         addr_init;
 
     -- Địa chỉ khởi tạo: dòng đầu tiên (Jsub) hoặc cột đầu tiên (Isub * W)
-    addr_init <= STD_LOGIC_VECTOR(unsigned(base_output_addr) + unsigned(Jsub)) WHEN init_sel = '1' ELSE
-        STD_LOGIC_VECTOR(unsigned(base_input_addr) + unsigned(Isub) * unsigned(W));
-
+    addr_init <= STD_LOGIC_VECTOR(resize(
+        unsigned(base_output_addr) + unsigned(Jsub), 16)) WHEN init_sel = '1' ELSE
+        STD_LOGIC_VECTOR(resize(
+        unsigned(base_output_addr) + (unsigned(Isub) * unsigned(Wadd)), 16));
     -- Kiểm tra lỗi kích thước: width và height phải từ 5 đến 256
     size_err <= '1' WHEN (unsigned(W) < to_unsigned(5, W'length)) OR
         (unsigned(H) < to_unsigned(5, H'length)) OR
@@ -158,6 +155,10 @@ BEGIN
     iMax <= '1' WHEN (unsigned(I) = unsigned(H)) ELSE
         '0';
     jMax <= '1' WHEN (unsigned(J) = unsigned(W)) ELSE
+        '0';
+    iSubMax <= '1' WHEN(unsigned(Isub) = unsigned(H)) ELSE
+        '0';
+    jSubMax <= '1' WHEN(unsigned(Jsub) = unsigned(W)) ELSE
         '0';
     REGA : Regn
     GENERIC MAP(DATA_WIDTH => 2 * DATA_WIDTH)

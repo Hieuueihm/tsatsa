@@ -59,7 +59,7 @@ PACKAGE MyLib IS
         PORT (
             RST, CLK : IN STD_LOGIC;
             Start : IN STD_LOGIC;
-            size_err, iMax, jMax : IN STD_LOGIC;
+            size_err, iMax, jMax, iSubMax, jSubMax : IN STD_LOGIC;
             mem_d_sel, Int_RE, Int_WE, En_A, En_B, En_C, En_D, En_i, En_j : OUT STD_LOGIC;
             LDI_i, LDI_j, En_Compute, compute_sel, addr_store_sel, init_sel : OUT STD_LOGIC;
             addr_sel : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -77,7 +77,6 @@ PACKAGE MyLib IS
             rst : IN STD_LOGIC;
 
             Start : IN STD_LOGIC;
-            Done : OUT STD_LOGIC;
 
             -- address bus
             base_input_addr : IN STD_LOGIC_VECTOR(ADDR_WIDTH - 1 DOWNTO 0);
@@ -101,7 +100,7 @@ PACKAGE MyLib IS
             -- output error sizes
 
             -- control signals 
-            size_err, iMax, jMax : OUT STD_LOGIC;
+            size_err, iMax, jMax, iSubMax, jSubMax : OUT STD_LOGIC;
             mem_d_sel, Int_RE, Int_WE, En_A, En_B, En_C, En_D, En_i, En_j : IN STD_LOGIC;
             LDI_i, LDI_j, En_Compute, compute_sel, addr_store_sel, init_sel : IN STD_LOGIC;
             addr_sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0)

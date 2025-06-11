@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Jun 11 14:40:00 2025
-# Process ID: 11675
+# Start of session at: Wed Jun 11 14:50:23 2025
+# Process ID: 12820
 # Current directory: /home/hieu/workspace/vhdl_pj_end
 # Command line: vivado
 # Log file: /home/hieu/workspace/vhdl_pj_end/vivado.log
@@ -12,22 +12,198 @@
 start_gui
 open_project /home/hieu/workspace/vhdl_pj_end/project_1/project_1.xpr
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files /home/hieu/workspace/vhdl_pj_end/Contronller.vhd] -no_script -reset -force -quiet
-remove_files  /home/hieu/workspace/vhdl_pj_end/Contronller.vhd
 launch_simulation
 source tb_IntegralImage.tcl
 current_wave_config {Untitled 1}
-add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST/RST}} {{/tb_IntegralImage/uut/CONTROLLER_INST/CLK}} {{/tb_IntegralImage/uut/CONTROLLER_INST/Start}} {{/tb_IntegralImage/uut/CONTROLLER_INST/size_err}} {{/tb_IntegralImage/uut/CONTROLLER_INST/iMax}} {{/tb_IntegralImage/uut/CONTROLLER_INST/jMax}} {{/tb_IntegralImage/uut/CONTROLLER_INST/mem_d_sel}} {{/tb_IntegralImage/uut/CONTROLLER_INST/Int_RE}} {{/tb_IntegralImage/uut/CONTROLLER_INST/Int_WE}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_A}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_B}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_C}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_D}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_i}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_j}} {{/tb_IntegralImage/uut/CONTROLLER_INST/LDI_i}} {{/tb_IntegralImage/uut/CONTROLLER_INST/LDI_j}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_Compute}} {{/tb_IntegralImage/uut/CONTROLLER_INST/compute_sel}} {{/tb_IntegralImage/uut/CONTROLLER_INST/addr_store_sel}} {{/tb_IntegralImage/uut/CONTROLLER_INST/init_sel}} {{/tb_IntegralImage/uut/CONTROLLER_INST/addr_sel}} {{/tb_IntegralImage/uut/CONTROLLER_INST/DONE}} {{/tb_IntegralImage/uut/CONTROLLER_INST/STATE}} 
+add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST}} 
 restart
 run all
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[65535]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[5]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[4]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[3]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[2]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[1]}} {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory[0]}} 
+restart
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/Din}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_init}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/init_sel}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/I}} 
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/W}} 
+restart
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/base_output_addr}} 
+restart
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Isub}} 
+restart
+run all
+relaunch_sim
 close_sim
+launch_simulation
+launch_simulation
 launch_simulation
 source tb_IntegralImage.tcl
 current_wave_config {Untitled 2}
-add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST/RST}} {{/tb_IntegralImage/uut/CONTROLLER_INST/CLK}} {{/tb_IntegralImage/uut/CONTROLLER_INST/Start}} {{/tb_IntegralImage/uut/CONTROLLER_INST/size_err}} {{/tb_IntegralImage/uut/CONTROLLER_INST/iMax}} {{/tb_IntegralImage/uut/CONTROLLER_INST/jMax}} {{/tb_IntegralImage/uut/CONTROLLER_INST/mem_d_sel}} {{/tb_IntegralImage/uut/CONTROLLER_INST/Int_RE}} {{/tb_IntegralImage/uut/CONTROLLER_INST/Int_WE}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_A}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_B}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_C}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_D}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_i}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_j}} {{/tb_IntegralImage/uut/CONTROLLER_INST/LDI_i}} {{/tb_IntegralImage/uut/CONTROLLER_INST/LDI_j}} {{/tb_IntegralImage/uut/CONTROLLER_INST/En_Compute}} {{/tb_IntegralImage/uut/CONTROLLER_INST/compute_sel}} {{/tb_IntegralImage/uut/CONTROLLER_INST/addr_store_sel}} {{/tb_IntegralImage/uut/CONTROLLER_INST/init_sel}} {{/tb_IntegralImage/uut/CONTROLLER_INST/DONE}} {{/tb_IntegralImage/uut/CONTROLLER_INST/addr_sel}} {{/tb_IntegralImage/uut/CONTROLLER_INST/STATE}} 
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_init}} 
 restart
 run all
+relaunch_sim
 restart
 run all
 current_wave_config {Untitled 2}
-add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST/DONE}} 
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/CONTROLLER_INST/STATE}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_init}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_store1}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_store}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_store_sel}} 
+restart
+run all
+current_wave_config {Untitled 2}
+log_wave {/tb_IntegralImage/uut/DATAPATH_INST/addr_store_sel} {/tb_IntegralImage/uut/DATAPATH_INST/addr_A} {/tb_IntegralImage/uut/DATAPATH_INST/addr_B} {/tb_IntegralImage/uut/DATAPATH_INST/addr_C} {/tb_IntegralImage/uut/DATAPATH_INST/addr_D} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/addr_store_sel}} {{/tb_IntegralImage/uut/DATAPATH_INST/addr_A}} {{/tb_IntegralImage/uut/DATAPATH_INST/addr_B}} {{/tb_IntegralImage/uut/DATAPATH_INST/addr_C}} {{/tb_IntegralImage/uut/DATAPATH_INST/addr_D}} 
+restart
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Wadd}} 
+restart
+run all
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/I}} {{/tb_IntegralImage/uut/DATAPATH_INST/J}} {{/tb_IntegralImage/uut/DATAPATH_INST/Isub}} {{/tb_IntegralImage/uut/DATAPATH_INST/Jsub}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/I}} {{/tb_IntegralImage/uut/DATAPATH_INST/J}} {{/tb_IntegralImage/uut/DATAPATH_INST/Isub}} {{/tb_IntegralImage/uut/DATAPATH_INST/Jsub}} {{/tb_IntegralImage/uut/DATAPATH_INST/A}} {{/tb_IntegralImage/uut/DATAPATH_INST/B}} {{/tb_IntegralImage/uut/DATAPATH_INST/D}} 
+restart
+run all
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/C}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Data_store}} 
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/memory}} 
+restart
+run all
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+run all
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/Data_out}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/RE}} 
+restart
+run all
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/WE}} 
+current_wave_config {Untitled 2}
+add_wave {{/tb_IntegralImage/uut/DATAPATH_INST/Memory_ins/Dout}} 
+restart
+run all
+relaunch_sim
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all
+relaunch_sim
+restart
+run all

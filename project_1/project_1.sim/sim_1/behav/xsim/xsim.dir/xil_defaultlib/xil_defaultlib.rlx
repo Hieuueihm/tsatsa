@@ -3,11 +3,11 @@
 Jun 10 2021
 19:45:28
 /home/hieu/workspace/vhdl_pj_end/Compute.vhd,1749623709,vhdl,,,,compute,,,,,,,,
-/home/hieu/workspace/vhdl_pj_end/Controller.vhd,1749627716,vhdl,/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd,,,controller,,,,,,,,
+/home/hieu/workspace/vhdl_pj_end/Controller.vhd,1749630509,vhdl,/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd,,,controller,,,,,,,,
 /home/hieu/workspace/vhdl_pj_end/Counter.vhd,1749614185,vhdl,,,,counter,,,,,,,,
-/home/hieu/workspace/vhdl_pj_end/Datapath.vhd,1749627460,vhdl,/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd,,,datapath,,,,,,,,
-/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd,1749626264,vhdl,,,,integralimage,,,,,,,,
-/home/hieu/workspace/vhdl_pj_end/Memory.vhd,1749624998,vhdl,,,,memory,,,,,,,,
-/home/hieu/workspace/vhdl_pj_end/MyLib.vhd,1749626980,vhdl,/home/hieu/workspace/vhdl_pj_end/Datapath.vhd;/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd,,,mylib,,,,,,,,
+/home/hieu/workspace/vhdl_pj_end/Datapath.vhd,1749630657,vhdl,/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd,,,datapath,,,,,,,,
+/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd,1749630449,vhdl,,,,integralimage,,,,,,,,
+/home/hieu/workspace/vhdl_pj_end/Memory.vhd,1749628844,vhdl,,,,memory,,,,,,,,
+/home/hieu/workspace/vhdl_pj_end/MyLib.vhd,1749630406,vhdl,/home/hieu/workspace/vhdl_pj_end/Datapath.vhd;/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd,,,mylib,,,,,,,,
 /home/hieu/workspace/vhdl_pj_end/Regn.vhd,1749613625,vhdl,,,,regn,,,,,,,,
-/home/hieu/workspace/vhdl_pj_end/tb.vhd,1749627510,vhdl,,,,tb_integralimage,,,,,,,,
+/home/hieu/workspace/vhdl_pj_end/tb.vhd,1749632939,vhdl,,,,tb_integralimage,,,,,,,,

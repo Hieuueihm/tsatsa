@@ -38,7 +38,7 @@ ENTITY IntegralImage IS
 END ENTITY IntegralImage;
 
 ARCHITECTURE rtl OF IntegralImage IS
-    SIGNAL iMax, jMax : STD_LOGIC;
+    SIGNAL iMax, jMax, jSubMax, iSubMax : STD_LOGIC;
     SIGNAL mem_d_sel, Int_RE, Int_WE, En_A, En_B, En_C, En_D, En_i, En_j : STD_LOGIC;
     SIGNAL LDI_i, LDI_j, En_Compute, compute_sel, addr_store_sel, init_sel : STD_LOGIC;
     SIGNAL size_err : STD_LOGIC;
@@ -53,7 +53,6 @@ BEGIN
             clk => clk,
             rst => rst,
             Start => Start,
-            Done => Done,
             base_input_addr => base_input_addr,
             base_output_addr => base_output_addr,
             mem_addr => mem_addr,
@@ -66,6 +65,8 @@ BEGIN
             size_err => size_err,
             iMax => iMax,
             jMax => jMax,
+            iSubMax => iSubMax,
+            jSubMax => jSubMax,
             mem_d_sel => mem_d_sel,
             Int_RE => Int_RE,
             Int_WE => Int_We,
@@ -92,6 +93,8 @@ BEGIN
             size_err => size_err,
             iMax => iMax,
             jMax => jMax,
+            iSubMax => iSubMax,
+            jSubMax => jSubMax,
             mem_d_sel => mem_d_sel,
             Int_RE => Int_RE,
             Int_WE => Int_We,
