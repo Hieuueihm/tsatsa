@@ -2,18 +2,71 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Jun 11 21:31:18 2025
-# Process ID: 102573
+# Start of session at: Thu Jun 12 00:47:17 2025
+# Process ID: 653
 # Current directory: /home/hieu/workspace/vhdl_pj_end
 # Command line: vivado
 # Log file: /home/hieu/workspace/vhdl_pj_end/vivado.log
 # Journal file: /home/hieu/workspace/vhdl_pj_end/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/hieu/workspace/vhdl_pj_end/project_2/project_2.xpr
 open_project /home/hieu/workspace/vhdl_pj_end/project_3/project_3.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
 launch_simulation -mode post-implementation -type timing
 source tb_IntegralImage.tcl
-update_compile_order -fileset sources_1
+restart
+run all
+launch_simulation
+source tb_IntegralImage.tcl
+restart
+run all
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_simulation -mode post-synthesis -type timing
+source tb_IntegralImage.tcl
+run all
+current_sim simulation_2
+relaunch_sim
+run all
+current_sim simulation_3
+relaunch_sim
+restart
+run all
+current_sim simulation_1
+close_sim
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+restart
+run all
+current_sim simulation_2
+close_sim
+launch_simulation
+source tb_IntegralImage.tcl
+restart
+run all
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_3
+current_design synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+close_sim
+launch_simulation
+source tb_IntegralImage.tcl
 restart
 run all

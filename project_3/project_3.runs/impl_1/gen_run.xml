@@ -1,62 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1749651979">
-  <File Type="RCFI_FILE" Name="IntegralImage.rcfi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="IntegralImage_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-RPX" Name="IntegralImage_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="IntegralImage_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="IntegralImage_methodology_drc_routed.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="IntegralImage_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="IntegralImage_postroute_physopt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="IntegralImage_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="IntegralImage_postplace_pwropt.dcp"/>
-  <File Type="PWROPT-DCP" Name="IntegralImage_pwropt.dcp"/>
-  <File Type="PLACE-DCP" Name="IntegralImage_placed.dcp"/>
-  <File Type="OPT-DCP" Name="IntegralImage_opt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="IntegralImage_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="IntegralImage_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="IntegralImage_timing_summary_routed.rpx"/>
+<GenRun Id="impl_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1749665796">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-SYSDEF" Name="IntegralImage.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="IntegralImage.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="IntegralImage.sysdef"/>
+  <File Type="BG-BGN" Name="IntegralImage.bgn"/>
+  <File Type="RNPI_FILE" Name="IntegralImage.rnpi"/>
+  <File Type="BG-DRC" Name="IntegralImage.drc"/>
+  <File Type="CFI_FILE" Name="IntegralImage.cfi"/>
+  <File Type="RCFI_FILE" Name="IntegralImage.rcfi"/>
   <File Type="BITSTR-MMI" Name="IntegralImage.mmi"/>
   <File Type="BITSTR-BMM" Name="IntegralImage_bd.bmm"/>
   <File Type="BITSTR-NKY" Name="IntegralImage.nky"/>
   <File Type="BITSTR-RBT" Name="IntegralImage.rbt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="IntegralImage_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="IntegralImage_reports.tcl"/>
   <File Type="RBD_FILE" Name="IntegralImage.rbd"/>
   <File Type="BITSTR-MSK" Name="IntegralImage.msk"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="IntegralImage_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="IntegralImage.tcl"/>
-  <File Type="ROUTE-TIMING-PB" Name="IntegralImage_timing_summary_routed.pb"/>
-  <File Type="OPT-DRC" Name="IntegralImage_drc_opted.rpt"/>
   <File Type="NPI_FILE" Name="IntegralImage.npi"/>
   <File Type="BG-BIN" Name="IntegralImage.bin"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="IntegralImage_timing_summary_routed.rpt"/>
-  <File Type="RNPI_FILE" Name="IntegralImage.rnpi"/>
-  <File Type="BG-BGN" Name="IntegralImage.bgn"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="IntegralImage_routed_bb.dcp"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="RDI-RDI" Name="IntegralImage.vdi"/>
-  <File Type="CFI_FILE" Name="IntegralImage.cfi"/>
-  <File Type="BG-DRC" Name="IntegralImage.drc"/>
-  <File Type="ROUTE-ERROR-DCP" Name="IntegralImage_routed_error.dcp"/>
   <File Type="PDI-FILE" Name="IntegralImage.pdi"/>
   <File Type="BG-BIT" Name="IntegralImage.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="IntegralImage_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="IntegralImage_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="IntegralImage_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="IntegralImage_timing_summary_postroute_physopted.rpx"/>
+  <File Type="RDI-RDI" Name="IntegralImage.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="IntegralImage_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="IntegralImage_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="IntegralImage_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="IntegralImage_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="IntegralImage_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="IntegralImage_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="IntegralImage_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="IntegralImage_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="IntegralImage_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="IntegralImage_timing_summary_routed.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="IntegralImage_route_status.pb"/>
-  <File Type="OPT-HWDEF" Name="IntegralImage.hwdef"/>
-  <File Type="PLACE-IO" Name="IntegralImage_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="IntegralImage_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="IntegralImage_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="IntegralImage_control_sets_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="IntegralImage_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="IntegralImage_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="IntegralImage_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="IntegralImage_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="IntegralImage_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="IntegralImage_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="IntegralImage_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="IntegralImage_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="IntegralImage_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="IntegralImage_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="IntegralImage_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="IntegralImage_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="IntegralImage_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="IntegralImage_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="IntegralImage_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="IntegralImage_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="IntegralImage_routed_bb.dcp"/>
   <File Type="ROUTE-DCP" Name="IntegralImage_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="IntegralImage_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="IntegralImage_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="IntegralImage_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="IntegralImage_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="IntegralImage_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="IntegralImage_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="IntegralImage_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="IntegralImage_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="IntegralImage_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="IntegralImage_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="IntegralImage_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="IntegralImage_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="IntegralImage_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="IntegralImage_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="IntegralImage_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="IntegralImage_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="IntegralImage_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="IntegralImage_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="IntegralImage_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="IntegralImage.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="IntegralImage_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="IntegralImage_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="IntegralImage_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="IntegralImage_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="IntegralImage_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="IntegralImage_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="IntegralImage_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="IntegralImage.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../Compute.vhd">
@@ -143,6 +161,5 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

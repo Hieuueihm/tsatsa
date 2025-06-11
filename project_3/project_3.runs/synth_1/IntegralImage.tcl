@@ -75,7 +75,6 @@ set_param power.enableCarry8RouteBelPower 1
 set_param power.BramSDPPropagationFix 1
 set_param chipscope.maxJobs 2
 set_param power.enableLutRouteBelPower 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu7ev-ffvc1156-2-e
 

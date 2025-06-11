@@ -8,7 +8,7 @@ END tb_IntegralImage;
 ARCHITECTURE behavior OF tb_IntegralImage IS
 
     CONSTANT DATA_WIDTH : INTEGER := 8;
-    CONSTANT ADDR_WIDTH : INTEGER := 16;
+    CONSTANT ADDR_WIDTH : INTEGER := 18;
 
     CONSTANT IMG_W : INTEGER := 5;
     CONSTANT IMG_H : INTEGER := 5;
@@ -142,9 +142,9 @@ BEGIN
         REPORT "Xử lý hoàn tất";
         FOR i IN 0 TO IMG_H LOOP
             FOR j IN 0 TO IMG_W LOOP
+                RE <= '1';
                 mem_addr <= STD_LOGIC_VECTOR(to_unsigned(BASE_OUTPUT + i * (IMG_W + 1) + j, ADDR_WIDTH));
                 WAIT UNTIL rising_edge(clk);
-                RE <= '1';
 
             END LOOP;
         END LOOP;

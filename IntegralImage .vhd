@@ -5,7 +5,7 @@ USE work.MyLib.ALL;
 ENTITY IntegralImage IS
     GENERIC (
         DATA_WIDTH : INTEGER := 8;
-        ADDR_WIDTH : INTEGER := 16);
+        ADDR_WIDTH : INTEGER := 18);
 
     PORT (
         clk : IN STD_LOGIC;

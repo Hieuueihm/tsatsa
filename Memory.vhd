@@ -17,7 +17,7 @@ ENTITY Memory IS
     );
 END ENTITY Memory;
 ARCHITECTURE rtl OF Memory IS
-    TYPE memory_type IS ARRAY (200 DOWNTO 0) OF STD_LOGIC_VECTOR(2 * DATA_WIDTH - 1 DOWNTO 0);
+    TYPE memory_type IS ARRAY (2 ** ADDR_WIDTH - 1 DOWNTO 0) OF STD_LOGIC_VECTOR(2 * DATA_WIDTH - 1 DOWNTO 0);
     SIGNAL memory : memory_type := (OTHERS => (OTHERS => '0'));
 BEGIN
     PROCESS (CLK)

@@ -66,7 +66,7 @@ BEGIN
     -- Internal signals for memory read/write control
     D_calc <= (OTHERS => '0') WHEN mem_d_sel = '0' ELSE
         Data_store;
-    D_in_m <= STD_LOGIC_VECTOR(resize(unsigned(Data_in), 16)) WHEN Start = '0' ELSE
+    D_in_m <= STD_LOGIC_VECTOR(resize(unsigned(Data_in),  2 * DATA_WIDTH)) WHEN Start = '0' ELSE
         D_calc;
     internal_WE <= WE OR Int_WE;
     internal_RE <= RE OR Int_RE;
@@ -112,19 +112,19 @@ BEGIN
 
     -- addr_A: base_input_addr + (Isub * W) + Jsub
     addr_A <= STD_LOGIC_VECTOR(resize(
-        unsigned(base_input_addr) + unsigned(Isub) * unsigned(W) + unsigned(Jsub), 16));
+        unsigned(base_input_addr) + unsigned(Isub) * unsigned(W) + unsigned(Jsub), ADDR_WIDTH));
 
     addr_B <= STD_LOGIC_VECTOR(resize(
-        unsigned(base_output_addr) + unsigned(Isub) * unsigned(Wadd) + unsigned(J), 16));
+        unsigned(base_output_addr) + unsigned(Isub) * unsigned(Wadd) + unsigned(J), ADDR_WIDTH));
 
     addr_C <= STD_LOGIC_VECTOR(resize(
-        unsigned(base_output_addr) + unsigned(I) * unsigned(Wadd) + unsigned(Jsub), 16));
+        unsigned(base_output_addr) + unsigned(I) * unsigned(Wadd) + unsigned(Jsub), ADDR_WIDTH));
 
     addr_D <= STD_LOGIC_VECTOR(resize(
-        unsigned(base_output_addr) + unsigned(Isub) * unsigned(Wadd) + unsigned(Jsub), 16));
+        unsigned(base_output_addr) + unsigned(Isub) * unsigned(Wadd) + unsigned(Jsub), ADDR_WIDTH));
 
     addr_store <= STD_LOGIC_VECTOR(resize(
-        unsigned(base_output_addr) + unsigned(I) * unsigned(Wadd) + unsigned(J), 16));
+        unsigned(base_output_addr) + unsigned(I) * unsigned(Wadd) + unsigned(J), ADDR_WIDTH));
     WITH addr_sel SELECT
         addr_reg <= addr_A WHEN "00",
         addr_B WHEN "01",
@@ -141,9 +141,9 @@ BEGIN
 
     -- Địa chỉ khởi tạo: dòng đầu tiên (Jsub) hoặc cột đầu tiên (Isub * W)
     addr_init <= STD_LOGIC_VECTOR(resize(
-        unsigned(base_output_addr) + unsigned(Jsub), 16)) WHEN init_sel = '1' ELSE
+        unsigned(base_output_addr) + unsigned(Jsub), ADDR_WIDTH)) WHEN init_sel = '1' ELSE
         STD_LOGIC_VECTOR(resize(
-        unsigned(base_output_addr) + (unsigned(Isub) * unsigned(Wadd)), 16));
+        unsigned(base_output_addr) + (unsigned(Isub) * unsigned(Wadd)), ADDR_WIDTH));
     -- Kiểm tra lỗi kích thước: width và height phải từ 5 đến 256
     size_err <= '1' WHEN (unsigned(W) < to_unsigned(5, W'length)) OR
         (unsigned(H) < to_unsigned(5, H'length)) OR

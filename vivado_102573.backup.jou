@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jun 11 21:31:18 2025
+# Process ID: 102573
+# Current directory: /home/hieu/workspace/vhdl_pj_end
+# Command line: vivado
+# Log file: /home/hieu/workspace/vhdl_pj_end/vivado.log
+# Journal file: /home/hieu/workspace/vhdl_pj_end/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/hieu/workspace/vhdl_pj_end/project_2/project_2.xpr
+open_project /home/hieu/workspace/vhdl_pj_end/project_3/project_3.xpr
+launch_simulation -mode post-implementation -type timing
+source tb_IntegralImage.tcl
+update_compile_order -fileset sources_1
+restart
+run all
