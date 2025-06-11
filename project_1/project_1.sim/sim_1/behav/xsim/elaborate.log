@@ -1,0 +1,23 @@
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /home/hieu/tools/Vivado/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 51bceb014fcd4a68acc8445aca3a66be --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_IntegralImage_behav xil_defaultlib.tb_IntegralImage -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.mylib
+Compiling architecture rtl of entity xil_defaultlib.Memory [\Memory(data_width=8,addr_width=...]
+Compiling architecture rtl of entity xil_defaultlib.Counter [\Counter(addr_width=16)\]
+Compiling architecture rtl of entity xil_defaultlib.Regn [\Regn(data_width=16)\]
+Compiling architecture rtl of entity xil_defaultlib.Compute [compute_default]
+Compiling architecture rtl of entity xil_defaultlib.Datapath [\Datapath(data_width=8,addr_widt...]
+Compiling architecture rtl of entity xil_defaultlib.Controller [controller_default]
+Compiling architecture rtl of entity xil_defaultlib.IntegralImage [\IntegralImage(data_width=8,addr...]
+Compiling architecture behavior of entity xil_defaultlib.tb_integralimage
+Built simulation snapshot tb_IntegralImage_behav

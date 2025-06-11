@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Compute.vhd" \
+"../../../../../Controller.vhd" \
+"../../../../../Counter.vhd" \
+"../../../../../MyLib.vhd" \
+"../../../../../Datapath.vhd" \
+"../../../../../IntegralImage .vhd" \
+"../../../../../Memory.vhd" \
+"../../../../../Regn.vhd" \
+"../../../../../tb.vhd" \
+
+# Do not sort compile order
+nosort

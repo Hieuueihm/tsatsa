@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/hieu/workspace/vhdl_pj_end/Controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/hieu/workspace/vhdl_pj_end/IntegralImage .vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'IntegralImage'
